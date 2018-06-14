@@ -1,0 +1,967 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>BolaoNet.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.0</ProjectVersion>
+    <ProjectGuid>{67cbc824-a49e-4e9b-a947-360f3dfe65c3}</ProjectGuid>
+    <DSP>Microsoft.Data.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchema</DefaultFileStructure>
+    <DeployToDatabaseAddToServerExplorer>True</DeployToDatabaseAddToServerExplorer>
+    <DeployToScript>True</DeployToScript>
+    <CatalogPropertiesFile>Properties\Database.sqlsettings</CatalogPropertiesFile>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+    <RootNamespace>BolaoNet.Database</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>4.0</PreviousProjectVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\TeamData\Microsoft.Data.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="build" />
+    <Folder Include="build\dbDeploy" />
+    <Folder Include="build\dbDeploy\1.0" />
+    <Folder Include="Create Scripts" />
+    <Folder Include="Create Scripts\Tables" />
+    <Folder Include="Full" />
+    <Folder Include="build\dbDeploy\0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertiesFile Include="Properties\Database.sqlsettings">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqldeployment">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqlcmdvars">
+    </PropertiesFile>
+    <Build Include="Properties\Database.sqlpermissions">
+      <ModelBuilderType>Permissions</ModelBuilderType>
+    </Build>
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <NotInBuild Include="Create Scripts\Tables\dbDeploy.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\dbproviders.xml">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\Net.Sf.Dbdeploy.dll">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0005.Create_Table_lg_content_types.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0006.Create_Table_lg_log_level_types.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0007.Create_Table_lg_log_records.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0008.Create_Table_UserMaritalStatus.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0009.Create_Table_Users.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0011.Create_Table_UsersInRoles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0010.Create_Table_Roles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0001.Cleaning_Up.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0012.Create_Table_Profiles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0013.Create_Table_Times.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0014.Create_Table_Estadios.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0015.Create_Table_Campeonatos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0016.Create_Table_CampeonatosTimes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0017.Create_Table_CampeonatosFases.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0018.Create_Table_CampeonatosGrupos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0019.Create_Table_CampeonatosGruposTimes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0020.Create_Table_CampeonatosHistorico.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0021.Create_Table_CampeonatosPosicoes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0022.Create_Table_CampeonatosClassificacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0023.Create_Table_Jogos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0024.Create_Table_Boloes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0025.Create_Table_BoloesMembros.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0026.Create_Table_BoloesPontuacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0027.Create_Table_BoloesPremios.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0028.Create_Table_BoloesRegras.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0029.Create_Table_BoloesRequestsStatus.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0030.Create_Table_BoloesRequests.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0032.Create_Table_BoloesCriteriosPontos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0043.Create_Table_BoloesCriteriosPontosTimes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0033.Create_Table_BoloesMembrosClassificacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0034.Create_Table_BoloesMembrosPontos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0035.Create_Table_BoloesPontosRodadas.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0036.Create_Table_BoloesPontosRodadasUsuarios.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0037.Create_Table_BoloesCampeonatosClassificacaoUsuarios.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0038.Create_Table_ApostasExtras.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0039.Create_Table_ApostasExtrasUsuarios.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0040.Create_Table_Mensagens.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0041.Create_Table_PagamentosTipo.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0042.Create_Table_Pagamentos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0031.Create_Table_CriteriosFixos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0044.Create_Table_JogosUsuarios.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0051.Insert_Table_lg_content_types.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0052.Insert_Table_lg_log_level_types.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0058.Insert_Table_Roles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0054.Insert_Table_CriteriosFixos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0056.Insert_Table_Users.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0055.Insert_Table_UserMaritalStatus.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0057.Insert_PagamentoTipo.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0350.Create_Stored_Procedure_CreateCampeonatoHistoricoEntry.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0100.Create_Stored_Procedure_Framework_AddUserToRole.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0101.Create_Stored_Procedure_Framework_ApproveUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0102.Create_Stored_Procedure_Framework_ChangePassword.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0103.Create_Stored_Procedure_Framework_ChangePasswordQuestionAndAnswer.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0104.Create_Stored_Procedure_Framework_CreateRole.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0105.Create_Stored_Procedure_Framework_CreateUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0106.Create_Stored_Procedure_Framework_DeleteInactiveProfiles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0107.Create_Stored_Procedure_Framework_DeleteRole.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0108.Create_Stored_Procedure_Framework_DeleteUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0109.Create_Stored_Procedure_Framework_DesapproveUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0110.Create_Stored_Procedure_Framework_FindUsersByEmail.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0111.Create_Stored_Procedure_Framework_FindUsersByName.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0112.Create_Stored_Procedure_Framework_GetAllRoles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0113.Create_Stored_Procedure_Framework_GetAllUsers.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0114.Create_Stored_Procedure_Framework_GetNumberOfUsersOnline.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0115.Create_Stored_Procedure_Framework_GetPassword.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0116.Create_Stored_Procedure_Framework_GetPasswordWithFormat.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0117.Create_Stored_Procedure_Framework_GetProfiles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0118.Create_Stored_Procedure_Framework_GetRolesForUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0119.Create_Stored_Procedure_Framework_GetUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0120.Create_Stored_Procedure_Framework_GetUserByEmail.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0121.Create_Stored_Procedure_Framework_GetUserByName.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0122.Create_Stored_Procedure_Framework_GetUsersInRole.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0123.Create_Stored_Procedure_Framework_IsUserInRole.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0124.Create_Stored_Procedure_Framework_LoadAllUsers.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0125.Create_Stored_Procedure_Framework_LoadUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0126.Create_Stored_Procedure_Framework_LockUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0127.Create_Stored_Procedure_Framework_ProfileGetProperties.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0128.Create_Stored_Procedure_Framework_ProfileSetProperties.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0129.Create_Stored_Procedure_Framework_RemoveUserFromRole.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0130.Create_Stored_Procedure_Framework_ResetPassword.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0131.Create_Stored_Procedure_Framework_RoleExists.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0132.Create_Stored_Procedure_Framework_SetPassword.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0133.Create_Stored_Procedure_Framework_UnlockUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0134.Create_Stored_Procedure_Framework_UpdateUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0135.Create_Stored_Procedure_Framework_UpdateUserInfo.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0136.Create_Stored_Procedure_Framework_ValidateUser.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0137.Create_Stored_Procedure_InitializeDatabase.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0138.Create_Stored_Procedure_lg_ins_log_record.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0139.Create_Stored_Procedure_sp_ApostasExtras_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0140.Create_Stored_Procedure_sp_ApostasExtras_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0141.Create_Stored_Procedure_sp_ApostasExtras_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0142.Create_Stored_Procedure_sp_ApostasExtras_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0143.Create_Stored_Procedure_sp_ApostasExtras_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0144.Create_Stored_Procedure_sp_ApostasExtras_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0145.Create_Stored_Procedure_sp_ApostasExtras_InsertResult.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0146.Create_Stored_Procedure_sp_ApostasExtras_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0147.Create_Stored_Procedure_sp_ApostasExtras_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0148.Create_Stored_Procedure_sp_ApostasExtrasUsuarios_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0149.Create_Stored_Procedure_sp_ApostasExtrasUsuarios_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0150.Create_Stored_Procedure_sp_ApostasExtrasUsuarios_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0151.Create_Stored_Procedure_sp_ApostasExtrasUsuarios_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0152.Create_Stored_Procedure_sp_ApostasExtrasUsuarios_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0153.Create_Stored_Procedure_sp_ApostasExtrasUsuarios_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0154.Create_Stored_Procedure_sp_ApostasExtrasUsuarios_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0155.Create_Stored_Procedure_sp_Boloes_Aguardar.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0156.Create_Stored_Procedure_sp_Boloes_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0157.Create_Stored_Procedure_sp_Boloes_BuscaCriteriosPontos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0158.Create_Stored_Procedure_sp_Boloes_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0159.Create_Stored_Procedure_sp_Boloes_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0160.Create_Stored_Procedure_sp_Boloes_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0161.Create_Stored_Procedure_sp_Boloes_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0162.Create_Stored_Procedure_sp_Boloes_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0163.Create_Stored_Procedure_sp_Boloes_Iniciar.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0164.Create_Stored_Procedure_sp_Boloes_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0165.Create_Stored_Procedure_sp_Boloes_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0166.Create_Stored_Procedure_sp_Boloes_UsersInBolao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0167.Create_Stored_Procedure_sp_BoloesCriteriosPontos_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0168.Create_Stored_Procedure_sp_BoloesCriteriosPontos_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0169.Create_Stored_Procedure_sp_BoloesCriteriosPontosTimes_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0170.Create_Stored_Procedure_sp_BoloesCriteriosPontosTimes_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0171.Create_Stored_Procedure_sp_BoloesMembros_Add.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0172.Create_Stored_Procedure_sp_BoloesMembros_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0173.Create_Stored_Procedure_sp_BoloesMembros_Clear.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0174.Create_Stored_Procedure_sp_BoloesMembros_Del.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0175.Create_Stored_Procedure_sp_BoloesMembros_Load.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0176.Create_Stored_Procedure_sp_BoloesMembros_LoadApostasRestantes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0177.Create_Stored_Procedure_sp_BoloesMembrosPontos_Classificacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0178.Create_Stored_Procedure_sp_BoloesMembrosPontos_HistClassificacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0179.Create_Stored_Procedure_sp_BoloesMembrosPontos_LoadRodada.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0180.Create_Stored_Procedure_sp_BoloesMembrosPontosRodadas_Organize.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0181.Create_Stored_Procedure_sp_BoloesPontuacao_LoadAll.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0182.Create_Stored_Procedure_sp_BoloesPremios_LoadAll.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0183.Create_Stored_Procedure_sp_BoloesRegras_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0184.Create_Stored_Procedure_sp_BoloesRegras_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0185.Create_Stored_Procedure_sp_BoloesRegras_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0186.Create_Stored_Procedure_sp_BoloesRegras_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0187.Create_Stored_Procedure_sp_BoloesRegras_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0188.Create_Stored_Procedure_sp_BoloesRegras_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0189.Create_Stored_Procedure_sp_BoloesRegras_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0190.Create_Stored_Procedure_sp_BoloesRegras_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0191.Create_Stored_Procedure_sp_BoloesRequests_AddNew.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0192.Create_Stored_Procedure_sp_BoloesRequests_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0193.Create_Stored_Procedure_sp_BoloesRequests_ChangeStatus.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0194.Create_Stored_Procedure_sp_Campeonatos_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0195.Create_Stored_Procedure_sp_Campeonatos_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0196.Create_Stored_Procedure_sp_Campeonatos_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0197.Create_Stored_Procedure_sp_Campeonatos_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0198.Create_Stored_Procedure_sp_Campeonatos_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0199.Create_Stored_Procedure_sp_Campeonatos_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0200.Create_Stored_Procedure_sp_Campeonatos_LoadJogos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0201.Create_Stored_Procedure_sp_Campeonatos_LoadLastFinishedJogos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0202.Create_Stored_Procedure_sp_Campeonatos_LoadNextJogos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0203.Create_Stored_Procedure_sp_Campeonatos_LoadRodadas.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0204.Create_Stored_Procedure_sp_Campeonatos_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0205.Create_Stored_Procedure_sp_CampeonatosClassificacao_LoadClassificacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0206.Create_Stored_Procedure_sp_CampeonatosClassificacao_LoadRodada.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0207.Create_Stored_Procedure_sp_CampeonatosClassificacao_Organize.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0208.Create_Stored_Procedure_sp_CampeonatosFases_Add.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0209.Create_Stored_Procedure_sp_CampeonatosFases_Clear.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0210.Create_Stored_Procedure_sp_CampeonatosFases_Del.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0211.Create_Stored_Procedure_sp_CampeonatosFases_Load.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0212.Create_Stored_Procedure_sp_CampeonatosFases_Update.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0213.Create_Stored_Procedure_sp_CampeonatosGrupos_Add.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0214.Create_Stored_Procedure_sp_CampeonatosGrupos_Clear.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0215.Create_Stored_Procedure_sp_CampeonatosGrupos_Del.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0216.Create_Stored_Procedure_sp_CampeonatosGrupos_Load.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0217.Create_Stored_Procedure_sp_CampeonatosGrupos_Update.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0218.Create_Stored_Procedure_sp_CampeonatosGruposTimes_Add.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0219.Create_Stored_Procedure_sp_CampeonatosGruposTimes_Clear.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0220.Create_Stored_Procedure_sp_CampeonatosGruposTimes_Del.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0221.Create_Stored_Procedure_sp_CampeonatosGruposTimes_Load.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0222.Create_Stored_Procedure_sp_CampeonatosHistorico_Load.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0223.Create_Stored_Procedure_sp_CampeonatosPosicoes_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0224.Create_Stored_Procedure_sp_CampeonatosPosicoes_LoadAll.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0225.Create_Stored_Procedure_sp_CampeonatosRecordGols.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0226.Create_Stored_Procedure_sp_CampeonatosRecordGolsFrequencia.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0227.Create_Stored_Procedure_sp_CampeonatosRecords.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0228.Create_Stored_Procedure_sp_CampeonatosRecordTimeRecordJogosGols.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0229.Create_Stored_Procedure_sp_CampeonatosRecordTimeRecordSemGanhar.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0230.Create_Stored_Procedure_sp_CampeonatosRecordTimeRecordSemPerder.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0231.Create_Stored_Procedure_sp_CampeonatosRecordTimeRecordSeqDerrotas.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0232.Create_Stored_Procedure_sp_CampeonatosRecordTimeRecordSeqEmpates.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0233.Create_Stored_Procedure_sp_CampeonatosRecordTimeRecordSeqVitorias.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0234.Create_Stored_Procedure_sp_CampeonatosTimeClassificacaoRodadas.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0235.Create_Stored_Procedure_sp_CampeonatosTimes_Add.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0236.Create_Stored_Procedure_sp_CampeonatosTimes_Clear.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0237.Create_Stored_Procedure_sp_CampeonatosTimes_Del.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0238.Create_Stored_Procedure_sp_CampeonatosTimes_Load.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0239.Create_Stored_Procedure_sp_Estadios_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0240.Create_Stored_Procedure_sp_Estadios_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0241.Create_Stored_Procedure_sp_Estadios_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0242.Create_Stored_Procedure_sp_Estadios_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0243.Create_Stored_Procedure_sp_Estadios_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0244.Create_Stored_Procedure_sp_Estadios_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0245.Create_Stored_Procedure_sp_Estadios_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0246.Create_Stored_Procedure_sp_Estadios_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0247.Create_Stored_Procedure_sp_Jogos_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0248.Create_Stored_Procedure_sp_Jogos_Calcule_Dependencia.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0249.Create_Stored_Procedure_sp_Jogos_Calcule_Grupo.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0250.Create_Stored_Procedure_sp_Jogos_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0251.Create_Stored_Procedure_sp_Jogos_Count_By_Period.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0252.Create_Stored_Procedure_sp_Jogos_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0253.Create_Stored_Procedure_sp_Jogos_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0254.Create_Stored_Procedure_sp_Jogos_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0255.Create_Stored_Procedure_sp_Jogos_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0256.Create_Stored_Procedure_sp_Jogos_InsertAllData.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0257.Create_Stored_Procedure_sp_Jogos_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0258.Create_Stored_Procedure_sp_Jogos_ResultInsert.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0259.Create_Stored_Procedure_sp_Jogos_ResultRemove.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0260.Create_Stored_Procedure_sp_Jogos_SelectByPeriod.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0261.Create_Stored_Procedure_sp_Jogos_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0262.Create_Stored_Procedure_sp_JogosUsuarios_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0263.Create_Stored_Procedure_sp_JogosUsuarios_Apostas.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0264.Create_Stored_Procedure_sp_JogosUsuarios_Apostas_Classificacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0265.Create_Stored_Procedure_sp_JogosUsuarios_ApostasAutomatica.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0266.Create_Stored_Procedure_sp_JogosUsuarios_CalculaPontos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0267.Create_Stored_Procedure_sp_JogosUsuarios_Calcule_Dependencia.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0268.Create_Stored_Procedure_sp_JogosUsuarios_Calcule_Grupo.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0269.Create_Stored_Procedure_sp_JogosUsuarios_Calcule_Time.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0270.Create_Stored_Procedure_sp_JogosUsuarios_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0271.Create_Stored_Procedure_sp_JogosUsuarios_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0272.Create_Stored_Procedure_sp_JogosUsuarios_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0273.Create_Stored_Procedure_sp_JogosUsuarios_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0274.Create_Stored_Procedure_sp_JogosUsuarios_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0275.Create_Stored_Procedure_sp_JogosUsuarios_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0276.Create_Stored_Procedure_sp_JogosUsuariosValidacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0277.Create_Stored_Procedure_sp_Mensagens_AddMessage.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0278.Create_Stored_Procedure_sp_Mensagens_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0279.Create_Stored_Procedure_sp_Mensagens_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0280.Create_Stored_Procedure_sp_Mensagens_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0281.Create_Stored_Procedure_sp_Mensagens_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0282.Create_Stored_Procedure_sp_Mensagens_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0283.Create_Stored_Procedure_sp_Mensagens_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0284.Create_Stored_Procedure_sp_Mensagens_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0285.Create_Stored_Procedure_sp_Mensagens_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0286.Create_Stored_Procedure_sp_Mensagens_User.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0287.Create_Stored_Procedure_sp_Pagamentos_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0288.Create_Stored_Procedure_sp_Pagamentos_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0289.Create_Stored_Procedure_sp_Pagamentos_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0290.Create_Stored_Procedure_sp_Pagamentos_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0291.Create_Stored_Procedure_sp_Pagamentos_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0292.Create_Stored_Procedure_sp_Pagamentos_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0293.Create_Stored_Procedure_sp_Pagamentos_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0294.Create_Stored_Procedure_sp_Pagamentos_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0295.Create_Stored_Procedure_sp_Select_Count.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0296.Create_Stored_Procedure_sp_Select_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0297.Create_Stored_Procedure_sp_Times_All.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0298.Create_Stored_Procedure_sp_Times_CBO.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0299.Create_Stored_Procedure_sp_Times_CT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0300.Create_Stored_Procedure_sp_Times_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0301.Create_Stored_Procedure_sp_Times_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0302.Create_Stored_Procedure_sp_Times_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0303.Create_Stored_Procedure_sp_Times_PG.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0304.Create_Stored_Procedure_sp_Times_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0305.Create_Stored_Procedure_sp_Users_Load_Boloes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0306.Create_Stored_Procedure_sp_Users_Load_Mensagens.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0307.Create_Stored_Procedure_sp_Users_Load_Pagamentos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0353.Create_Stored_Procedure_CreateBolaoCopaDoMundo2010.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0351.Create_Stored_Procedure_CreateCampeonatoCopadoMundo2010.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0352.Create_Stored_Procedure_CreateCampeonatoHistoricoCopaDoMundo.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0059.Insert_Table_UsersInRoles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\0.1\0001.Cleaning_Up.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\0.1\dbproviders.xml">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\0.1\Net.Sf.Dbdeploy.dll">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0354.Create Stored Procedure CreateCampeonatoCopadasConfederacoes2013.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0355.Create Stored Procedure CreateBolaoCopaDasConfederacoes2013.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0060.Insert_Table_BoloesRequestsStatus.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0356.Create Stored Procedure CreateCampeonatoLibertadores2013.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0503.Create Stored Procedure Campeonato_Copa_do_Mundo_2006.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0501.Create Stored Procedure Campeonato_Copa_do_Mundo_2010.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0357.Alter Stored Procedure sp_Jogos_InsertAllData.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0358.Create Stored Procedure _Insert_Jogo_Result.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0502.Create Stored Procedure Insert_Copa_do_Mundo_2010.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0504.Create Stored Procedure _Insert_Copa_do_Mundo_2006.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0500.Create Stored Procedure Campeonato_Copa_do_Mundo_2014.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0505.Create Stored Procedure Campeonato_Copa_do_Mundo_2002.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0506.Create Stored Procedure _Insert_Copa_do_Mundo_2002.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0520.Create_Stored_Procedure_Test_Base.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0507.Create_Stored_Procedure_CreateBolaoCopaDoMundo2014.sql.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0308.Create_Stored_Procedure_sp_JogosUsuarios_Load_Acertos_Dificeis.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0359.Create_Stored_Procedure_sp_Jogos_Next_Jogo.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0360.Create_Stored Procedure sp_JogosUsuarios_Calcule_Final.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0309.Create_Stored_Procedure_sp_JogosUsuarios_CorrecaoEliminatorias.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0045.Create_Table_BoloesMembrosGrupo.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0310.Create_Stored_Procedure_sp_BoloesMembrosGrupos_IN.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0311.Create_Stored_Procedure_sp_BoloesMembrosGrupos_DE.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0312.Create_Stored_Procedure_sp_BoloesMembrosGrupos_Classificacao.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0313.Create_Stored_Procedure_sp_JogosUsuarios_Social_DT.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0314.Create_Stored_Procedure_sp_JogosUsuarios_Social_UP.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0315.Create_Stored_Procedure_sp_JogosUsuarios_Load_Sem_Acertos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0316.Create_Stored_Procedure_sp_JogosUsuarios_ProximosJogosUsuario.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="build\dbDeploy\1.0\0317.Create_Stored_Procedure_sp_JogosUsuarios_PontosObtidos.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+  </ItemGroup>
+</Project>

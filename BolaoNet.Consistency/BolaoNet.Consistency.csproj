@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6532A68-993D-44D3-A212-2A5CCABBAB21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BolaoNet.Consistency</RootNamespace>
+    <AssemblyName>BolaoNet.Consistency</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BolaoNet.Consistency, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassificacaoUsuario.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs" />
+    <Compile Include="VerifyJogo.cs" />
+    <Compile Include="VerifyJogos.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VerifyJogoUsuario.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BolaoNet.Business\BolaoNet.Business.csproj">
+      <Project>{308968C2-BE7C-4120-A889-11879EA6642B}</Project>
+      <Name>BolaoNet.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolaoNet.Dao\BolaoNet.Dao.csproj">
+      <Project>{7F47F2AF-163D-4B2D-8A2B-14BD80ED16C7}</Project>
+      <Name>BolaoNet.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolaoNet.Excel\BolaoNet.Excel.csproj">
+      <Project>{54F45779-EEB0-4AE5-A8A1-2E877066A1BE}</Project>
+      <Name>BolaoNet.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolaoNet.Model\BolaoNet.Model.csproj">
+      <Project>{25F4398B-0874-4D56-A477-2F7284A91211}</Project>
+      <Name>BolaoNet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Configuration\Framework.Configuration.csproj">
+      <Project>{E5EC06B5-D1BD-4DDD-B500-073EDB87E628}</Project>
+      <Name>Framework.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Dao\Framework.Dao.csproj">
+      <Project>{668FBB6D-8C48-4CE4-990D-DF69CD4B674C}</Project>
+      <Name>Framework.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.DataServices\Framework.DataServices.csproj">
+      <Project>{F5F7E769-3BAB-4716-8572-6948BBED6494}</Project>
+      <Name>Framework.DataServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Logging\Framework.Logging.csproj">
+      <Project>{5462A458-EDDC-4DE1-BF11-DEE75D2E1911}</Project>
+      <Name>Framework.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Rules\Framework.Rules.csproj">
+      <Project>{9B4450A5-177A-445F-8D98-4DC6E524ABD8}</Project>
+      <Name>Framework.Rules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Security\Framework.Security.csproj">
+      <Project>{0488EF02-C728-44AC-BCC2-3FEF6437130D}</Project>
+      <Name>Framework.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

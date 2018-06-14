@@ -1,0 +1,76 @@
+﻿12/04/2010
+-----------
+
+*OK* - 1) Não permitir a inserção do usuário se caso o mesmo não foi enviado o email de ativação
+*OK* - 2) Nos logs, criar a funcionalidade de envio de email externo para identificar o momento que o usuário foi criado.
+*OK* - 3) No módulo admin dos usuários, permitir que o usuário seja ativado, e aprovado.
+4) Criar a compatibilidade entre outros browsers.
+*OK* - 5) Quando ativar a conta, não enviar outro email de welcome quando clicado em login.
+*OK* - 6) Atribuir quais foram as mudanças realizadas pela última versão na tela principal
+*OK* - 7) Arrumar a tela de "esqueci a senha", permitindo o reenvio da senha ou da chave de ativação.
+*OK* - 8) Deixar o código de segurança "Case sensitive".
+*OK* - 9) Remover o campo CPF da tela de criação de contas.
+*OK* - 10) Criar a tela de mensagens para o Help desk caso ocorra algum erro.
+*OK* - 11) Selecionar automaticamente o bolão e campeonato no momento em que clicar nas apostas da tela principal.
+*OK* - 12) Ao se logar, ir automaticamente para a tela principal, independentemente do item que estava tentando abrir anteriormente.
+*OK* - 13) Colocar um link para a quantidade de membros do bolão na tela principal para que possa cair direto em colocação do bolão.
+*OK* - 14) Mostrar a quantidade de apostas não realizadas pelo usuário na tela principal para que ele possa identificar que não realizou todas as apostas.
+*OK* - 15) Arrumar a segurança do diretório onde possui a imagem, para que o usuário possa trocá-la ao editar o perfil.
+*OK* - 16) Ao atribuir apostas automáticas, colocar para todos os jogos, inclusive fase eliminatória.
+*OK* - 17) No filtro de jogos, atribuir dados para poder visualizar jogos do Grupo e de uma determinada fase.
+*OK* - 18) Atribuir uma mensagem de carregando no ajax para mostrar que a ação do usuário ainda está em execução.
+19) Ao se fazer apostas automáticas, arrumar a visualização da quantidade de jogos que está sendo aplicado.
+*OK* - 20) Arrumar as páginas que visualizam os jogos dos usuários para que sejam bloqueadas quando o bolão não permitir visualização das apostas dos usuários antes de iniciar o campeonato.
+*OK* - 21) Criar um bloqueio para todas as funcionalidades de cadastros quando a opção do bolão não permitir alterações.
+*OK* - 22) Criar um módulo para mostrar um pdf de apostas de todos os usuários por jogo ou todos os jogos por usuários.
+*OK* - 23) Ao atribuir valores de apostas, calcular qual time deve ser apresentado à próxima fase.
+*OK* - 24) Arrumar a descrição para o módulo "Goleadas".
+*OK* - 25) Arrumar os módulos de estatísticas e Gráficos rodadas para que mostre o gráfico.
+*OK* - 26) Criar um módulo de pontuação das apostas extras por posições.
+*OK* - 27) Ao terminar as rodadas do grupo, atribuir o time que deve ir para a próxima fase.
+*OK* - 28) No módulo de pagamentos, perguntar antes de excluir um item
+
+
+14/04/2010
+-----------
+*OK* - 1) Colocar descrição na página de apostas automáticas
+*OK* - 2) Colocar descrição na página de apostas extras
+*OK* - 3) Em apostas extras, permitir a visualização da bandeira ao se selecionar um time.
+*OK* - 5) Em apostas dos usuários, não limpar os dados das apostas quando o mesmo for selecionado para outro usuário.
+*OK* - 6) Em apostas do jogo, diminuir o tamnho do campo "DataAposta"
+*OK* - 7) Em critérios pontos, atribuir css no campo de pontos.
+8) Em apostas dos jogos, emitir uma mensagem de erro caso o usuário deixe em branco uma aposta, e restringir qualquer outro valor inputado que não seja número.
+*OK* - 9) Ao remover o campeonato ou bolão do menu direito, volta-se para a página principal
+*OK* - 10) Criar um módulo para avisar por email a quantidade de apostas faltantes para ser preenchidas.
+11) Ao pedir se deve ser excluido do bolão, ativar a funcionalidade de cancelamento.
+
+
+15/04/2010
+----------
+[*OK*] - 1) Corrigir no momento de realizar o input das apostas por fase pois não está salvando o valor
+*OK* - 2) Colocar a pendencia para times perdedores do jogo para os próximos jogos
+3) Criar uma página na parte de apostas permitindo o usuário visualizar a classificação dos times
+4) Criar uma página auxiliar para colocar valores para os jogos da fase eliminatória.
+
+
+16/04/2010
+----------
+1) Criar a atribuição para os jogos automáticos para suas dependências.
+*OK* - 2) Arrumar a seleção dos jogos quando estiver visualizando por grupo
+*OK* - 3) Arrumar a classificação dos times
+*OK* - 4) Arrumar o histórico de posicionamento entre os times na classificação
+*OK* - 5) Permitir o input de penalidades ao inserir o resultado do jogo
+
+17/04/2010
+-----------
+*OK* - 1) Arrumar a sessão do código para quando expirar o tempo de armazenar os dados do código de aceite.
+
+21/04/2010
+-----------
+*OK* - 1) Ao executar logoff ou fechar a página, finalizar as variáveis de logon.
+*OK* - 2) Criar uma página para envio de apostas para todos os usuários. Nela podendo iniciar o bolão ou finalizar o bolão.
+
+29/04/2010
+------------
+1) Emitir uma mensagem diferente se caso o usuário ainda não foi aprovado.
+2) Mostrar as mensagens de pendências caso seja convidado a participar de um bolão.

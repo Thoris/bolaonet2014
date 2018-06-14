@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F47F2AF-163D-4B2D-8A2B-14BD80ED16C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BolaoNet.Dao</RootNamespace>
+    <AssemblyName>BolaoNet.Dao</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\BolaoNet.Dao.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mysql.data, Version=5.2.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferencedComponents\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Boloes\IDaoApostaExtra.cs" />
+    <Compile Include="Boloes\IDaoBolaoRegras.cs" />
+    <Compile Include="Boloes\IDaoBoloesPontuacao.cs" />
+    <Compile Include="Boloes\SQLSupport\ApostaExtra.cs" />
+    <Compile Include="Boloes\SQLSupport\ApostaExtraUsuario.cs" />
+    <Compile Include="Boloes\IDaoBolaoCriteriosPontos.cs" />
+    <Compile Include="Boloes\IDaoBolaoCriteriosPontosTimes.cs" />
+    <Compile Include="Boloes\IDaoBolaoRequests.cs" />
+    <Compile Include="Boloes\IDaoApostaExtraUsuario.cs" />
+    <Compile Include="Boloes\IDaoBolaoPremio.cs" />
+    <Compile Include="Boloes\IDaoMensagens.cs" />
+    <Compile Include="Boloes\IDaoPagamento.cs" />
+    <Compile Include="Boloes\SQLSupport\JogoUsuario.cs" />
+    <Compile Include="Boloes\SQLSupport\Bolao.cs" />
+    <Compile Include="Boloes\SQLSupport\Mensagem.cs" />
+    <Compile Include="Boloes\SQLSupport\Pagamento.cs" />
+    <Compile Include="Boloes\SQLSupport\Regras.cs" />
+    <Compile Include="Boloes\Util\ApostaExtra.cs" />
+    <Compile Include="Boloes\Util\ApostaExtraUsuario.cs" />
+    <Compile Include="Boloes\Util\ApostasRestantesUser.cs" />
+    <Compile Include="Boloes\Util\Bolao.cs" />
+    <Compile Include="Boloes\Util\BolaoCriterioPontos.cs" />
+    <Compile Include="Boloes\Util\BolaoCriterioPontosTimes.cs" />
+    <Compile Include="Boloes\Util\BolaoMembros.cs" />
+    <Compile Include="Boloes\Util\BolaoPremio.cs" />
+    <Compile Include="Boloes\Util\BolaoRegras.cs" />
+    <Compile Include="Boloes\Util\BolaoRequest.cs" />
+    <Compile Include="Boloes\Util\BolaoUserClassificacao.cs" />
+    <Compile Include="Boloes\Util\Mensagem.cs" />
+    <Compile Include="Boloes\Util\UserPontosData.cs" />
+    <Compile Include="Campeonatos\IDaoCampeonatoHistorico.cs" />
+    <Compile Include="Campeonatos\SQLSupport\Campeonato.cs" />
+    <Compile Include="Campeonatos\SQLSupport\Fase.cs" />
+    <Compile Include="Campeonatos\SQLSupport\Grupo.cs" />
+    <Compile Include="Campeonatos\IDaoCampeonatoGrupo.cs" />
+    <Compile Include="Campeonatos\IDaoCampeonatoFase.cs" />
+    <Compile Include="Campeonatos\IDaoCampeonatoPosicoes.cs" />
+    <Compile Include="Campeonatos\IDaoCampeonatoRecordTime.cs" />
+    <Compile Include="Campeonatos\IDaoCampeonatoReports.cs" />
+    <Compile Include="Campeonatos\IDaoCampeonatoTimes.cs" />
+    <Compile Include="Campeonatos\IGrupo.cs" />
+    <Compile Include="Boloes\Util\BoloesPontuacao.cs" />
+    <Compile Include="Campeonatos\Util\Campeonato.cs" />
+    <Compile Include="Campeonatos\Util\CampeonatoClassificacao.cs" />
+    <Compile Include="Campeonatos\Util\CampeonatoHistorico.cs" />
+    <Compile Include="Campeonatos\Util\CampeonatoPosicao.cs" />
+    <Compile Include="Campeonatos\Util\CampeonatoRecord.cs" />
+    <Compile Include="Campeonatos\Util\Fase.cs" />
+    <Compile Include="Campeonatos\Util\GolsFrequencia.cs" />
+    <Compile Include="Campeonatos\Util\Grupo.cs" />
+    <Compile Include="Campeonatos\Util\Jogo.cs" />
+    <Compile Include="Campeonatos\Util\TimeRodadas.cs" />
+    <Compile Include="DadosBasicos\SQLSupport\Estadio.cs" />
+    <Compile Include="Boloes\IDaoJogoUsuario.cs" />
+    <Compile Include="Boloes\IDaoBolao.cs" />
+    <Compile Include="DadosBasicos\Util\Estadio.cs" />
+    <Compile Include="DadosBasicos\Util\Time.cs" />
+    <Compile Include="Excel\ExcelBase.cs" />
+    <Compile Include="Excel\IExcelBase.cs" />
+    <Compile Include="Excel\ITemplateExcelBase.cs" />
+    <Compile Include="Excel\TemplateExcelBase.cs" />
+    <Compile Include="IDaoBase.cs" />
+    <Compile Include="Campeonatos\IDaoCampeonato.cs" />
+    <Compile Include="Campeonatos\IDaoJogo.cs" />
+    <Compile Include="Campeonatos\SQLSupport\Jogo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DadosBasicos\SQLSupport\Time.cs" />
+    <Compile Include="Users\IDaoUsers.cs" />
+    <Compile Include="Users\SQLSupport\Users.cs" />
+    <Compile Include="Users\Util\UserBoloes.cs" />
+    <Compile Include="Users\Util\UserPagamentos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BolaoNet.Model\BolaoNet.Model.csproj">
+      <Project>{25F4398B-0874-4D56-A477-2F7284A91211}</Project>
+      <Name>BolaoNet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.DataServices\Framework.DataServices.csproj">
+      <Project>{F5F7E769-3BAB-4716-8572-6948BBED6494}</Project>
+      <Name>Framework.DataServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Security\Framework.Security.csproj">
+      <Project>{0488EF02-C728-44AC-BCC2-3FEF6437130D}</Project>
+      <Name>Framework.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Boloes\OleDBSuport\" />
+    <Folder Include="Campeonatos\OleDBSuport\" />
+    <Folder Include="DadosBasicos\OleDBSuport\" />
+    <Folder Include="Users\OleDBSuport\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

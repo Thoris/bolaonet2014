@@ -1,0 +1,172 @@
+﻿/*---------- WRAP ----------*/
+#wrap
+{  
+}
+
+/*---------- HEADER ----------*/
+#header
+{
+    height: 100px; /*width: 100%;*/
+    position: relative;
+    background-image: url('../Images/header.JPG');
+    background-repeat: repeat-y;
+    background-color: #000000;
+}
+#headerTitle
+{
+	padding: 15px 100px 5px 460px;
+	font-size: 25px;
+	font-family: 'Century Gothic';
+	color: #FFFF99;
+	text-align: center;
+	font-weight: bold;
+}
+#headerEnvironment
+{
+	padding: 0px 20px 0px 0px;
+	font-size: 20px;
+	text-align: right;
+	font-family: 'Century Gothic';
+	font-weight: bolder;
+}
+
+/*---------- MENU ----------*/
+#menu
+{
+    background-color: #E3EAEB;
+    height: 25px;
+}
+#menu td
+{
+    width: 150px;
+    text-align: center;
+}
+
+/*---------- SUBHEADER ----------*/
+#subheader
+{
+	height: 30px;
+	width: 100%;
+	color: #FFFFFF;
+	background-image: url('../Images/gradientBlue.jpg');
+	font-weight: bolder;
+	font-family: Verdana;
+	font-size: 11px;
+}
+/*---------- PROGRESS DIV ----------*/
+#pathdescription
+{
+	width: 80%;
+	float: left;
+	text-align: left;
+	
+}
+#pathdescription a
+{
+    color: #FFFF00;
+}
+
+#progress
+{
+	text-align: right;
+	vertical-align: middle;
+	background-color: #FFFF00;
+	color: #FF0000;
+	text-decoration: blink;
+	font-weight: bold;
+	font-size:10px;
+}
+
+
+/*---------- MENULEFT ----------*/
+#left
+{
+    float: left;
+    width: 148px;
+    text-align: center;
+    background-color: #E4EEFA;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+/*---------- BUTTONS ----------*/
+#buttons
+{
+    width: 100%;
+    text-align: right;
+    position: relative;
+    background-color: #F4FAFF;
+}
+
+/*---------- ALARMS ----------*/
+#alarms
+{
+	width: 100%;
+}
+/*---------- BODY ----------*/
+#body
+{
+	background-color:Window;
+	width: 100%;
+	text-align:center;
+	
+}
+
+/*---------- MAIN ----------*/
+#main
+{
+    /*float: left; */
+    margin: 0px 0px 0px 148px;
+}
+
+/*---------- MENURIGHT ----------*/
+#right
+{
+	display: none;
+}
+
+/*---------- FOOTER ----------*/
+#footer
+{
+	height: 60px;
+	clear: both;
+	padding: 0;
+	background: #FFF url('../Images/footerbg.gif') repeat-x;
+}
+/* Configuração das informações que ficam no canto esquerdo da tela */
+#footer #footer-left 
+{
+	width: 60%;
+	float: left;
+	text-align: left;
+}
+
+/* Configurações que ficam no canto direito da tela */
+#footer #footer-right
+{
+	width: 40%;
+	float: right;
+	text-align: right;
+}
+
+/* Configuração das imagens no canto esquerdo */
+.imageLeft
+{
+	
+}
+
+
+/* Menu principal */
+.MainMenu
+{
+    position: relative;
+    margin-left: 12px; 
+}
+
+.MainMenu ul
+{
+}
+.MainMenu li
+{
+    width: 120px;
+}

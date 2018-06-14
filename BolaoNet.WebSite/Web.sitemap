@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="BolaoNet"  description="" roles="*" >
+
+      <siteMapNode url="~\Users\Home.aspx" title="Principal" description="Página principal" roles="*" >
+        
+        <siteMapNode url="~\Apostas\BolaoParticipacao.aspx" title="Meus Bolões" description="Administrar meus bolões" />
+        <siteMapNode url="~\Users\EditProfile.aspx" title="Editar Perfil" description="Editar perfil" />
+        <siteMapNode url="~\Users\ChangePassword.aspx" title="Alterar Senha" description="Alterar Senha" />
+
+
+        <siteMapNode url="~\Apostas\HomeApostas.aspx" title="Apostas"  description="Página principal das apostas" roles="Administrador,Apostador">
+          <siteMapNode url="~\Apostas\ApostasJogos.aspx" title="Jogos" description="Apostas dos Jogos" />
+          <siteMapNode url="~\Apostas\JogosApostasAutomaticas.aspx" title="Automático" description="Apostas automáticas" />
+          <siteMapNode url="~\Apostas\JogosApostasExtras.aspx" title="Extras" description="Apostas extras" />
+        </siteMapNode>
+
+        <siteMapNode url="~\Mensagens\Mensagens.aspx" title="Mensagens"  description="Mensagens do bolão" roles="Administrador,Visitante de Bolão,Apostador,Gerenciador de Bolão">
+          <siteMapNode url="~\Mensagens\MensagensAdd.aspx" title="Mensagens" description="Enviar mensagem" />
+        </siteMapNode>
+
+        <siteMapNode url="~\Regras\BolaoRegras.aspx" title="Regras" description="Regras do bolão" />
+
+
+
+      </siteMapNode>
+
+
+      <siteMapNode url="~\Campeonatos\CampeonatoHome.aspx" title="Campeonatos"  description="Página Principal do Campeonato" roles="Administrador,Gerenciador de Campeonatos,Visitante de Campeonato">
+        
+        <siteMapNode url="~\Campeonatos\CampeonatoClassificacao.aspx" title="Classificação" description="Classificação do Campeonato" />
+        <siteMapNode url="~\Campeonatos\CampeonatoJogos.aspx" title="Jogos" description="Jogos do Campeonato" />
+        <!--<siteMapNode url="~\Campeonatos\CampeonatoJogosTime.aspx" title="Jogos do Time" description="Jogos de um time selecionado" />-->
+        <siteMapNode url="~\Campeonatos\CampeonatoGoleadas.aspx" title="Goleadas" description="Goleadas ocorridas no campeonato" />
+        <siteMapNode url="~\Campeonatos\CampeonatoRecords.aspx" title="Records placares" description="Records de placares do campeonato" />
+        <!--<siteMapNode url="~\Campeonatos\CampeonatoRecordsGols.aspx" title="Records Gols" description="Records de gols do campeonato" />-->
+
+        <siteMapNode url="~\Campeonatos\CampeonatoEstatisticas.aspx" title="Estatísticas" description="Estatísticas do campeonato" />
+        <siteMapNode url="~\Campeonatos\CampeonatoGraficoRodadas.aspx" title="Gráfico Rodadas" description="Gráfico de posições dos times do campeonato" />
+        <siteMapNode url="~\Campeonatos\CampeonatoCampeoes.aspx" title="Histórico" description="Histórico dos Campeões" />
+        <!--<siteMapNode url="~\Campeonatos\CampeonatoChances.aspx" title="Chances" description="Chances dos Times no campeonato" />-->
+
+        
+      </siteMapNode>
+      
+      <siteMapNode url="~\Boloes\BolaoHome.aspx" title="Bolões"  description="Página principal do bolão" roles="Administrador,Gerenciador de Bolão,Visitante de Bolão"  >
+        
+        <siteMapNode url="~\Boloes\BolaoClassificacao.aspx" title="Classificacao" description="Classificação do bolão" />
+        <siteMapNode url="~\Boloes\ApostasUsuarios.aspx" title="Aposta Usuários" description="Apostas do usuário específico" />
+        <siteMapNode url="~\Boloes\BolaoJogos.aspx" title="Jogos" description="Jogos do bolão" >
+          <siteMapNode url="~\Boloes\ApostasJogos.aspx" title="Aposta Jogos" description="Apostas de todos os usuários para os jogos" roles="Administrador,Gerenciador de Resultados" />
+        </siteMapNode>
+        <siteMapNode url="~\Boloes\ApostasExtrasUsuarios.aspx" title="Apostas Extras" description="Apostas extras dos usuários" />
+        <siteMapNode url="~\Boloes\ApostasExtrasPosicao.aspx" title="Extras Pos." description="Apostas extras dos usuários por posição" />
+        <siteMapNode url="~\Boloes\ApostasClassificacao.aspx" title="Apostas Classif." description="Classificação das apostas" />
+        <siteMapNode url="~\Boloes\BolaoSimulacaoApostasExtras.aspx" title="Simul. Extras" description="Simulação de Apostas Extras" />
+        <siteMapNode url="~\Boloes\BolaoResultadosDificeis.aspx" title="Res.Complicados" description="Resultados Complicados" />
+        <siteMapNode url="~\Boloes\BolaoResultadosSemAcertos.aspx" title="Sem Acertos" description="Jogos sem acertos" />
+
+
+        
+
+        <siteMapNode url="~\Boloes\BolaoGraficoHistoricoClassificacao.aspx" title="Historico Pontos" description="Histórico de pontos dos usuários por rodada" />
+
+
+        <siteMapNode url="~\Boloes\Admin\BolaoAdminHome.aspx" title="Admin"  description="Administração do Bolão" roles="Administrador,Gerenciador de Bolão" >
+
+
+          <siteMapNode url="~\Resultados\CampeonatoApostasExtrasResultado.aspx" title="Apostas Extras" description="Resultados de apostas extras" />
+
+
+          <siteMapNode url="~\Boloes\Admin\GerenciamentoMembros.aspx" title="Gerenciar Membros" description="Gerenciamento de membros do bolão" />
+          <siteMapNode url="~\Pagamentos\BolaoPagamentos.aspx" title="Pagamentos" description="Lista de Pagamentos efetuados" roles="Administrador,Gerenciador de Pagamentos" >
+            <siteMapNode url="~\Pagamentos\BolaoPagamentosItem.aspx" title="Pagamento" description="Entrada de Pagamento" />
+          </siteMapNode>
+
+          <siteMapNode url="~\Pontuacao\BolaoCriteriosPontos.aspx" title="Critérios Pontos" description="Gerenciamento de pontos dos critérios do bolão" roles="Administrador,Gerenciador de Pontuação" />
+          <siteMapNode url="~\Boloes\Admin\GerenciamentoBolao.aspx?Mode=2" title="Editar Bolão" description="Gerenciamento de bolão" />
+
+          <siteMapNode url="~\Boloes\Admin\BolaoIniciarParar.aspx" title="Iniciar / Parar" description="Gerenciamento de início do bolão" />
+
+
+          <siteMapNode url="~\Boloes\Admin\BolaoCarregarExcel.aspx" title="Carregar Excel" description="Carregamento de apostas através de arquivo excel" />
+
+          
+
+        </siteMapNode>
+
+        
+
+      </siteMapNode>
+
+
+
+      <!--<siteMapNode url="~\Users\Admin\HomeAdmin.aspx" title="Site Admin"  description="Administrador do site"  roles="teste">
+        <siteMapNode url="~\Users\Admin\RolesInUsers.aspx" title="Roles In Users" description="Roles In Users" />
+        <siteMapNode url="~\Users\Admin\UsersInRoles.aspx" title="Users In Roles" description="Users In Roles" />
+      </siteMapNode>-->
+
+
+
+   </siteMapNode>
+</siteMap>

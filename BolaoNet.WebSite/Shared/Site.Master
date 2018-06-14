@@ -1,0 +1,326 @@
+﻿<%@ Master Language="C#"  AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BolaoNet.WebSite.Shared.SiteMaster" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+--%>
+
+<%--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+--%>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link type="text/css" rel="stylesheet" href="../Styles/site-core.css" />
+    <link type="text/css" rel="stylesheet" href="../Styles/site-web.css" media="all and (min-width:961px)" />
+    <link type="text/css" rel="stylesheet" href="../Styles/site-tablet.css" media="all and (min-width:641px) and (max-width:960)" />
+    <link type="text/css" rel="stylesheet" href="../Styles/site-mobile.css" media="all and (max-width:640px)" />
+    <!--[if IE]>
+        <link type="text/css" rel="stylesheet" href="../Styles/site-web.css" media="screen" />
+    <![endif]-->
+    <!-- link href="../Styles/Style.css" rel="stylesheet" type="text/css" / -->    
+    <title>BolaoNet</title>
+    </head>
+
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="MainScrptMgr" runat="server" EnablePartialRendering="true" />
+        <asp:SiteMapDataSource ID="SiteMapDataSourceMenu" runat="server" 
+            ShowStartingNode="False" />
+    
+        <div id="wrap">
+            <div id="header">
+                <div id="headerTitle">
+                    <asp:Label ID="lblHeaderTitle" runat="server" Text="Bolão NET"></asp:Label>
+                </div>
+                <div id="headerEnvironment">
+                    <asp:Label ID="lblHeaderEnvironment" runat="server" Text=""></asp:Label>
+                </div>
+            </div>
+
+            <div id="menu">
+                
+                <asp:LoginView ID="loginViewTopMenu" runat="server">
+                    <LoggedInTemplate>
+                          <asp:Menu ID="mnuTop" runat="server" 
+                                DataSourceID="SiteMapDataSourceMenu" 
+                                MaximumDynamicDisplayLevels="0" Orientation="Horizontal" 
+                              SkinID="TopMenu">
+                            </asp:Menu>
+                    </LoggedInTemplate>
+                </asp:LoginView>            
+            
+            
+            <%--
+                <cc1:UpdatePanelAnimationExtender ID="animationExtender" TargetControlID="panelErrorMessage" runat="server">            
+                    <Animations>                    
+                        <OnUpdated>                        
+                            <Color StartValue="#FFFF55" EndValue="#FFFFFF" Property="style" PropertyKey="backgroundColor" Duration="1" />
+                        </OnUpdated>
+                    </Animations>
+                </cc1:UpdatePanelAnimationExtender>
+            --%>
+            
+            
+                
+
+            </div>
+            
+            <div id="subheader">
+                        
+                <div>                                                
+                    <div id="pathdescription">        
+                        <asp:SiteMapPath ID="SiteMapPath" runat="server" PathSeparator=" : ">
+                            <CurrentNodeTemplate><%# Eval("title")%><br />
+                            <small><i><%# Eval("description") %></i></small>
+                            </CurrentNodeTemplate>
+                        </asp:SiteMapPath>
+                    </div>
+                    
+                    <div id="progress">
+                        <asp:UpdateProgress ID="UpdateProgressData" runat="server" DisplayAfter="100">
+                            <ProgressTemplate>
+                                <asp:Image ID="imgProcess" runat="server" ImageUrl="~/Images/ajax-loader-small.gif" />                            
+                            
+                                Aguarde...<br />
+                                Carregando requisição</td>
+                    
+                            </ProgressTemplate>                
+                        </asp:UpdateProgress>                
+                    </div>                    
+                </div>                
+            </div>
+            
+            
+        
+        
+        
+        
+            <div id="left">            
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMenuLeft" runat="server">
+                </asp:ContentPlaceHolder>  
+                <asp:LoginName ID="loginNameUser" runat="server" />
+                <asp:LoginView ID="loginLogOnOff" runat="server">
+                    <LoggedInTemplate>
+                        <asp:LoginStatus ID="LoginStatus" runat="server" 
+                            LogoutPageUrl="~/Default.aspx" 
+                            LogoutAction="RedirectToLoginPage" onloggingout="LoginStatus_LoggingOut" />
+                    </LoggedInTemplate>
+                    <AnonymousTemplate>
+                        <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Visitante/Login.aspx">Login</asp:HyperLink>
+                    </AnonymousTemplate>
+                </asp:LoginView>
+                <div id="Panel">
+                    <asp:LoginView ID="LoginViewMenuLeft" runat="server">
+                        <LoggedInTemplate>
+                            <asp:Menu ID="MenuMain" runat="server" DataSourceID="SiteMapDataSourceMenu" 
+                                MaximumDynamicDisplayLevels="0" Visible="False">
+                            </asp:Menu>
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                            <br />
+                            Você precisa estar logado para realizar apostas.<br />
+                            <br />
+                            <asp:HyperLink ID="lnkRegistrar" runat="server" 
+                                NavigateUrl="~/Visitante/RequestLogin.aspx">Registrar-se</asp:HyperLink>
+                            <br />
+                            <br />
+                            <br />
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+                    <br />
+                </div>
+                
+            </div>
+            
+            <div id="right">
+                <asp:LoginView ID="LoginViewMenuRigth" runat="server">
+                    <LoggedInTemplate>
+
+                        <table cellspacing="1" width="100%">
+                            <tr>
+                                <td>
+                                    Bolão:</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:DropDownList ID="cboBolao" runat="server" AutoPostBack="True" 
+                                        onselectedindexchanged="cboBolao_SelectedIndexChanged" Width="100%">
+                                    </asp:DropDownList>
+                                </td>
+                            </tr>
+         
+                        </table>
+                        <table cellspacing="1" width="100%">
+                            <tr>
+                                <td>
+                                    Campeonato:</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:DropDownList ID="cboCampeonato" runat="server" AutoPostBack="True" 
+                                        onselectedindexchanged="cboCampeonato_SelectedIndexChanged" Width="100%">
+                                    </asp:DropDownList>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:GridView ID="grdFinishedJogos" runat="server" AutoGenerateColumns="False" 
+                                        Caption="Últimos Jogos">
+                                        <Columns>
+                                            <asp:BoundField DataField="DataJogo">
+                                                <ItemStyle Font-Size="7pt" Width="50px" />
+                                            </asp:BoundField>
+                                            <asp:BoundField DataField="Time1" HeaderText="Time1" Visible="False">
+                                                <ItemStyle Font-Size="7pt" />
+                                            </asp:BoundField>
+                                            <asp:ImageField DataAlternateTextField="Time1" 
+                                                DataAlternateTextFormatString="{0}" DataImageUrlField="Time1" 
+                                                DataImageUrlFormatString="~/Images/Database/Times/{0}.gif">
+                                                <ItemStyle Width="5px" />
+                                            </asp:ImageField>
+                                            <asp:BoundField DataField="GolsTime1">
+                                                <ItemStyle Font-Size="8pt" HorizontalAlign="Center" />
+                                            </asp:BoundField>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    x
+                                                </ItemTemplate>
+                                                <ItemStyle HorizontalAlign="Center" />
+                                            </asp:TemplateField>
+                                            <asp:BoundField DataField="GolsTime2">
+                                                <ItemStyle Font-Size="8pt" HorizontalAlign="Center" />
+                                            </asp:BoundField>
+                                            <asp:ImageField DataAlternateTextField="Time2" 
+                                                DataAlternateTextFormatString="{0}" DataImageUrlField="Time2" 
+                                                DataImageUrlFormatString="~/Images/Database/Times/{0}.gif">
+                                                <ItemStyle Width="5px" />
+                                            </asp:ImageField>
+                                            <asp:BoundField DataField="Time2" HeaderText="Time2" Visible="False">
+                                                <ItemStyle Font-Size="7pt" />
+                                            </asp:BoundField>
+                                        </Columns>
+                                    </asp:GridView>
+                                </td>
+                            </tr>
+                            <tr >
+                                <td>
+                                    <br />
+                                    <asp:GridView ID="grdNextJogos" runat="server" AutoGenerateColumns="False" 
+                                        Caption="Próximos Jogos">
+                                        <Columns>
+                                            <asp:BoundField DataField="DataJogo">
+                                                <ItemStyle Font-Size="7pt" Width="50px" />
+                                            </asp:BoundField>
+                                            <asp:BoundField DataField="Time1" HeaderText="Time1" Visible="False">
+                                                <ItemStyle Font-Size="7pt" />
+                                            </asp:BoundField>
+                                            <asp:ImageField DataAlternateTextField="Time1" 
+                                                DataAlternateTextFormatString="{0}" DataImageUrlField="Time1" 
+                                                DataImageUrlFormatString="~/Images/Database/Times/{0}.gif">
+                                                <ItemStyle Width="5px" />
+                                            </asp:ImageField>
+                                            <asp:BoundField DataField="GolsTime1" Visible="False">
+                                                <ItemStyle Font-Size="8pt" HorizontalAlign="Center" />
+                                            </asp:BoundField>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    x
+                                                </ItemTemplate>
+                                                <ItemStyle HorizontalAlign="Center" />
+                                            </asp:TemplateField>
+                                            <asp:BoundField DataField="GolsTime2" Visible="False">
+                                                <ItemStyle Font-Size="8pt" HorizontalAlign="Center" />
+                                            </asp:BoundField>
+                                            <asp:ImageField DataAlternateTextField="Time2" 
+                                                DataAlternateTextFormatString="{0}" DataImageUrlField="Time2" 
+                                                DataImageUrlFormatString="~/Images/Database/Times/{0}.gif">
+                                                <ItemStyle Width="5px" />
+                                            </asp:ImageField>
+                                            <asp:BoundField DataField="Time2" HeaderText="Time2" Visible="False">
+                                                <ItemStyle Font-Size="7pt" />
+                                            </asp:BoundField>
+                                        </Columns>
+                                    </asp:GridView>
+                                    <br />
+                                </td>
+                            </tr>                            
+                        </table>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                <br />
+                
+                <asp:HyperLink ID="lnkReleaseNotes" runat="server" 
+                    NavigateUrl="~/Visitante/ReleaseNotes.aspx">Release Notes</asp:HyperLink>
+                
+                <div id="daysNext">
+                    <br />
+                    <asp:Label ID="lblDescDias" runat="server" Text="Dias para o próximo jogo:" CssClass="labelDaysNext"></asp:Label>
+                    <br />
+                    <asp:Label ID="lblDias" runat="server" Text="0" CssClass="textDaysNext"></asp:Label>
+                </div>
+
+            </div>
+            
+            <div id="main">
+                
+                <div id="buttons">
+                    <asp:ContentPlaceHolder ID="ContentPlaceMainMenu" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                    <asp:UpdatePanel ID="panelMessages" runat="server" ChildrenAsTriggers="False"
+                        EnableViewState="False" UpdateMode="Conditional">                    
+                        <ContentTemplate>                       
+                            <asp:Panel ID="pnlMessages" runat="server" Visible="false"  CssClass="errorMessagePanel">
+                                <asp:DataList ID="lstMessages" runat="server" EnableViewState="false">
+                                    <ItemStyle CssClass="messagesList" />
+                                    <ItemTemplate>
+                                        <%#Container.DataItem%>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </asp:Panel>                       
+                        </Contenttemplate>
+                    </asp:UpdatePanel>                
+                
+                <div id="alarms">                
+                    <asp:UpdatePanel ID="panelErrorMessage" runat="server" ChildrenAsTriggers="False"
+                        EnableViewState="False" UpdateMode="Conditional">
+                    
+                        <ContentTemplate>                       
+                            <asp:Panel ID="pnlErrors" runat="server" Visible="false"  CssClass="errorMessagePanel">
+                                <asp:Image ID="imgAlert" runat="server" ImageUrl="~/Images/alert.gif" /><strong>Desculpe, erros de validação encontrados:</strong>                        
+                                <asp:DataList ID="lstErrorMessages" runat="server" EnableViewState="false">
+                                    <ItemStyle CssClass="errorList" />
+                                    <ItemTemplate>
+                                        <%#Container.DataItem%>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </asp:Panel>                       
+                        </Contenttemplate>
+                    </asp:UpdatePanel>
+                </div>
+                <div id="body">
+                    <asp:contentplaceholder id="ContentPlaceHolderMain" runat="server">
+                    </asp:contentplaceholder>
+                </div>                
+            </div>
+            
+            <div id="footer">
+                
+                <div id="footer-content" style="text-align: right">
+                    <div id="footer-right"> 
+                        <a href="/Default.aspx">Home</a> | <a>Site Map</a> | <a>RSS Feed</a> 
+                    </div>
+                    <div id="footer-left"> © Copyright 2014 <strong>Todos os direitos reservados.<br />
+                        </strong>Desenvolvido por: <a>Thoris</a> | Valid <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> 
+                    </div>
+                    Versão
+                    <asp:Label ID="lblVersion" runat="server"></asp:Label>
+                &nbsp;</div>
+            </div>    
+        </div>    
+    </form>
+</body>
+</html>

@@ -1,0 +1,359 @@
+﻿##|TYPE Template
+##|UNIQUEID 42e6b703-41e8-4b92-bcc4-ee2dbd8e48c3
+##|TITLE Create DDL (Table/View/SPs)
+##|NAMESPACE Microsoft SQL Server.DDL
+##|SOURCE_TYPE Source
+##|OUTPUT_LANGUAGE Transact-SQL
+##|COMMENTS_BEGIN
+This template originally started as "Create table" but now has addition for generate scripts for selected Views and Stored Procedures for SQL Server 2000 and greater.
+##|COMMENTS_END
+##|GUI_ENGINE .Net Script
+##|GUI_LANGUAGE VB.Net
+##|GUI_BEGIN
+
+Public Class GeneratedGui
+			Inherits DotNetScriptGui
+
+	Public Sub New(context As ZeusContext)
+		MyBase.New(context)
+	End Sub
+
+	Public Overloads Overrides Sub Setup()
+			DnpUtils.ReadInputFromCache(context)
+
+			ui.Title = "Generate Table DDLs"
+			ui.Width = 400
+			ui.Height = 650
+
+			Dim lbl As GuiLabel
+
+			' Setup Database selection combobox.
+			lbl = ui.AddLabel("lblDatabases", "Select a Database :", "Select a database in the dropdown below.")
+			lbl.Bold = True
+			Dim cmbDatabases As GuiComboBox = ui.AddComboBox("cmbDatabase", "Select a database.")
+
+			' Setup Tables selection multi-select listbox.
+			lbl = ui.AddLabel("lblTables", "Select Tables :", "Select tables from the listbox below.")
+			lbl.Bold = True
+			Dim lstTables As GuiListBox = ui.AddListBox("lstTables", "Select table.")
+			lstTables.Height = 100
+
+			Dim btnClearTableSel As GuiButton = ui.AddButton("btnClearTableSel", "Clear Selection", "Clear Selection for tables.")
+			btnClearTableSel.AttachEvent("onclick", "btnClearTableSel_Click")
+
+			' Setup Views selection multi-select listbox.
+			lbl = ui.AddLabel("lblViews", "Select Views :", "Select views from the listbox below.")
+			lbl.Bold = True
+			Dim lstViews As GuiListBox = ui.AddListBox("lstViews", "Select view.")
+			lstViews.Height = 100
+
+			Dim btnClearViewSel As GuiButton = ui.AddButton("btnClearViewSel", "Clear Selection", "Clear Selection for views.")
+			btnClearViewSel.AttachEvent("onclick", "btnClearViewSel_Click")
+			
+			' Setup StoredProcedure selection multi-select listbox.
+			lbl = ui.AddLabel("lblSP", "Select SPs :", "Select StoredProcedure from the listbox below.")
+			lbl.Bold = True
+			Dim lstSP As GuiListBox = ui.AddListBox("lstSP", "Select SPs.")
+			lstSP.Height = 100
+
+			Dim btnClearSPSel As GuiButton = ui.AddButton("btnClearSPSel", "Clear Selection", "Clear Selection for SPs.")
+			btnClearSPSel.AttachEvent("onclick", "btnClearSPSel_Click")
+
+			' Attach the onchange event to the cmbDatabases control.
+			setupDatabaseDropdown(cmbDatabases)
+			cmbDatabases.AttachEvent("onchange", "cmbDatabases_onchange")
+
+			ui.ShowGui = True
+		End Sub
+
+		Public Sub setupDatabaseDropdown(ByVal cmbDatabases As GuiComboBox)
+			Try
+				If MyMeta.IsConnected Then
+					cmbDatabases.BindData(MyMeta.Databases)
+					If Not MyMeta.DefaultDatabase Is Nothing Then
+						cmbDatabases.SelectedValue = MyMeta.DefaultDatabase.[Alias]
+						bind(cmbDatabases.SelectedValue)
+					End If
+				End If
+			Catch ex As Exception
+			End Try
+		End Sub
+
+		Public Sub bind(ByVal sDatabase As String)
+			Dim count As Integer = 0
+
+			Dim lstTables As GuiListBox = Ctype(ui("lstTables"), GuiListBox)
+			Dim lstViews As GuiListBox = Ctype(ui("lstViews"), GuiListBox)
+			Dim lstSP As GuiListBox = Ctype(ui("lstSP"), GuiListBox)
+
+			Try
+				Dim db As IDatabase = MyMeta.Databases(sDatabase)
+				lstTables.BindData(db.Tables)
+				lstViews.BindData(db.Views)
+				lstSP.BindData(db.Procedures)
+			Catch ex As Exception
+			End Try
+		End Sub
+
+		Public Sub cmbDatabases_onchange(ByVal control As GuiComboBox)
+			Dim cmbDatabases As GuiComboBox = Ctype(ui("cmbDatabase"), GuiComboBox)
+			bind(cmbDatabases.SelectedText)
+		End Sub
+
+		Public Sub btnClearTableSel_Click(ByVal control As GuiButton)
+			Dim lstTables As GuiListBox = Ctype(ui("lstTables"), GuiListBox)
+			lstTables.ClearSelected()
+		End Sub
+		Public Sub btnClearViewSel_Click(ByVal control As GuiButton)
+			Dim lstViews As GuiListBox = Ctype(ui("lstViews"), GuiListBox)
+			lstViews.ClearSelected()
+		End Sub
+		Public Sub btnClearSPSel_Click(ByVal control As GuiButton)
+			Dim lstSP As GuiListBox = Ctype(ui("lstSP"), GuiListBox)
+			lstSP.ClearSelected()
+		End Sub
+End Class
+##|GUI_END
+##|BODY_MODE Markup
+##|BODY_ENGINE .Net Script
+##|BODY_LANGUAGE VB.Net
+##|BODY_TAG_START <%
+##|BODY_TAG_END %>
+##|BODY_BEGIN
+<%
+Public Class GeneratedTemplate
+			Inherits DotNetScriptTemplate
+
+	Public Sub New(context As ZeusContext)
+		MyBase.New(context)
+	End Sub
+
+	'---------------------------------------------------
+	' Render() is where you want to write your logic    
+	'---------------------------------------------------
+	Public Overrides Sub Render
+	
+		DnpUtils.SaveInputToCache(context)
+
+		Dim db as IDatabase
+		Dim table As ITable
+		Dim view as IView
+		Dim procedure as IProcedure
+		Dim TableName As String
+		Dim ViewName As String
+		Dim StoredProcedure As String
+		Dim selectedTables As ArrayList
+		Dim selectedViews As ArrayList
+		Dim selectedSPs As ArrayList
+
+		'Dim type As String
+		Dim col as IColumn
+		Dim IsFirst As Boolean
+		Dim FK As IForeignKey
+		Dim fkeys As New HashTable
+		Dim PKIndex As IIndex
+		Dim Seprator As String
+	
+		db = MyMeta.Databases(input.Item("cmbDatabase"))
+		selectedTables = CType(input("lstTables"), ArrayList)
+		selectedViews = CType(input("lstViews"), ArrayList)
+		selectedSPs = CType(input("lstSP"), ArrayList)
+
+		For Each StoredProcedure in selectedSPs
+			procedure = db.Procedures(StoredProcedure)
+%>
+IF EXISTS (SELECT * FROM dbo.SYSOBJECTS WHERE id = object_id(N'dbo.[<%=procedure.Name%>]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.[<%=procedure.Name%>]
+GO
+<%
+		Next
+		For Each ViewName in selectedViews
+			view = db.Views(ViewName)
+%>
+IF EXISTS (SELECT * FROM dbo.SYSOBJECTS WHERE id = object_id(N'dbo.[<%=view.Name%>]') and OBJECTPROPERTY(id, N'IsUserView') = 1)
+DROP VIEW dbo.[<%=view.Name%>]
+GO
+<%
+		Next
+
+		'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+		''' Getting list of Foreignkeys.
+		'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+		For Each TableName in selectedTables
+			table = db.Tables(TableName)
+
+			For Each FK In table.ForeignKeys
+				If Not fKeys.ContainsKey( FK.Name ) Then
+					fKeys.Add( FK.Name, FK )
+				End If
+			Next
+		Next
+
+		For Each FK In fKeys.Values
+%>
+IF EXISTS (SELECT * FROM dbo.SYSOBJECTS WHERE id = object_id(N'dbo.[<%=FK.Name%>]') and OBJECTPROPERTY(id, N'IsForeignKey') = 1)
+ALTER TABLE dbo.[<%=FK.ForeignTable.Name%>] DROP CONSTRAINT [<%=FK.Name%>]
+GO
+<%
+		Next
+
+		For Each TableName in selectedTables
+			table = db.Tables(TableName)
+%>
+IF EXISTS (SELECT * FROM dbo.SYSOBJECTS WHERE id = object_id(N'dbo.[<%=table.Name%>]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE dbo.[<%=table.Name%>]
+GO
+<%
+		Next
+
+		'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+		''' Creating basic table structur.
+		'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+		For Each TableName in selectedTables
+			table = db.Tables(TableName)
+%>
+CREATE TABLE dbo.[<%=table.Name%>] (<%
+			IsFirst = True
+			output.incTab()
+			Seprator= ""
+			For Each Col in table.Columns
+				output.write( Seprator )
+				output.writeln("")
+				output.autotab( CreateColumnScript( col ) )
+				Seprator = ","
+			Next
+			output.decTab()
+%>
+)
+GO
+<%
+			If table.PrimaryKeys.Count > 0 Then
+				'Find Index that match primary key.
+				Dim tempIndex As IIndex
+				Dim PkFound = False
+				Dim Matched As Integer = 0
+
+				For Each tempIndex in table.Indexes
+					If tempIndex.Columns.Count = table.PrimaryKeys.Count Then
+						Matched = 0
+						For Each tempCol As IColumn In tempIndex.Columns
+							If Not table.PrimaryKeys(tempCol.Name) Is Nothing Then
+								Matched += 1
+							End If
+						Next
+						If table.PrimaryKeys.Count = Matched Then
+							PkFound = True
+							Exit For
+						End If
+					End If
+				Next
+
+				If PkFound And Not tempIndex Is Nothing Then
+%>
+ALTER TABLE dbo.[<%=table.Name%>] WITH NOCHECK ADD 
+	CONSTRAINT [<%=tempIndex.Name%>] PRIMARY KEY <%If tempIndex.Clustered Then output.write("CLUSTERED") %>
+	(<%
+					output.incTab()
+					output.incTab()
+					Seprator = ""
+					For Each tempCol As IColumn In tempIndex.Columns
+						output.write( Seprator )
+						output.writeln("")
+						output.autotab("[" + tempCol.Name + "]")
+						Seprator = ","
+					Next
+					output.decTab()
+					output.decTab()
+%>
+	)  ON [PRIMARY]
+GO
+<%
+				End If
+			End If
+		Next
+
+		For Each FK In fKeys.Values
+%>
+ALTER TABLE dbo.[<%=FK.ForeignTable.Name%>] ADD
+	CONSTRAINT [<%=FK.Name%>] FOREIGN KEY 
+	(
+		<%
+			IsFirst = True
+			For Each col In FK.ForeignColumns
+				If IsFirst = False Then
+					output.write(",")
+					output.writeln("")
+				End If
+				
+				output.autotab("[" + col.Name + "]")
+				IsFirst = False
+			Next
+		%>
+	) REFERENCES dbo.[<%=FK.PrimaryTable.Name%>] (
+		<%
+			IsFirst = True
+			For Each col In FK.PrimaryColumns
+				If IsFirst = False Then
+					output.write(",")
+					output.writeln("")
+				End If
+				
+				output.autotab("[" + col.Name + "]")
+				IsFirst = False
+			Next
+		%>
+	) <%
+		If FK.DeleteRule <> "NO ACTION" Then
+			output.write( " ON DELETE " + FK.DeleteRule)
+		End If
+		If FK.UpdateRule <> "NO ACTION" Then
+			output.write( " ON UPDATE " + FK.UpdateRule)
+		End If
+	%>
+GO
+<%
+		Next
+
+		For Each ViewName in selectedViews
+			view = db.Views(ViewName)
+%>
+<%=view.ViewText%>
+GO
+<%
+		Next
+
+		For Each StoredProcedure in selectedSPs
+			procedure = db.Procedures(StoredProcedure)
+%>
+<%=procedure.ProcedureText%>
+GO
+<%
+		Next
+
+	End Sub
+
+	Private Function CreateColumnScript( ByVal col As IColumn ) As String
+		Dim retStr As String
+
+		retStr = "[" + col.Name + "] " + col.DataTypeNameComplete
+
+		If col.IsAutoKey Then
+			retStr += " IDENTITY ( " + col.AutoKeySeed.ToString() + "," + col.AutoKeyIncrement.ToString() + " )"
+		End If
+
+		If col.HasDefault Then
+			retStr += " DEFAULT (" + col.Default + ")"
+		End If
+
+		If col.IsNullable Then
+			retStr += " NULL"
+		Else
+			retStr += " NOT NULL"
+		End If
+
+		Return retStr
+	End Function
+
+End Class
+%>
+##|BODY_END

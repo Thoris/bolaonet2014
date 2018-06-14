@@ -1,0 +1,577 @@
+﻿body
+{
+	padding: 0 0 0 0;
+	margin:  0 0 0 0;
+	/*font: 12px Verdana, Tahoma, Arial, sans-serif;*/
+	color: #666666; 
+	
+}
+
+/* links */
+a
+{
+	color: #3399FF;
+	text-align: center;
+	}
+a:hover
+{
+	color: #FF9900;
+}
+
+
+/*---------- WRAP ----------*/
+#wrap
+{
+	width: 1000px;
+	text-align: left;	
+}
+/*---------- HEADER ----------*/
+#header
+{
+	height: 100px;
+	width: 100%;
+	position: relative;
+	background-image: url('../Images/header.JPG');
+	
+}
+#headerTitle
+{
+	padding: 15px 100px 5px 460px;
+	font-size: 37px;
+	font-family: 'Century Gothic';
+	color: #FFFF99;
+	text-align: center;
+	font-weight: bold;
+}
+#headerEnvironment
+{
+	padding: 0px 20px 0px 0px;
+	font-size: 25px;
+	text-align: right;
+	font-family: 'Century Gothic';
+	font-weight: bolder;
+}
+
+
+/*---------- MENU ----------*/
+#menu
+{
+	
+	background-color: #689CCE;
+}
+
+
+
+/*---------- SUBHEADER ----------*/
+#subheader
+{
+	height: 30px;
+	width: 100%;
+	color: #FFFFFF;
+	background-image: url('../Images/gradientBlue.jpg');
+	font-weight: bolder;
+	font-family: Verdana;
+	font-size: 11px;
+}
+/*---------- PROGRESS DIV ----------*/
+#pathdescription
+{
+	width: 80%;
+	float: left;
+	text-align: left;
+}
+
+#progress
+{
+	width: 19%;
+	float: right;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #FFFF00;
+	color: #FF0000;
+	text-decoration: blink;
+	font-weight: bold;
+}
+
+
+/*---------- MENULEFT ----------*/
+#left
+{
+	float: left;
+	width: 148px;
+	text-align: center;
+	background-color: #E4EEFA;
+	/*padding: 20px 20px 20px 20px;*/
+}
+
+/*---------- BUTTONS ----------*/
+#buttons
+{
+	width: 100%;
+	/*background-color: #F7F7F4;*/
+	text-align: right;
+}
+
+/*---------- ALARMS ----------*/
+#alarms
+{
+	width: 100%;
+}
+
+/*---------- BODY ----------*/
+#body
+{
+	background-color:Window;
+	width: 100%;
+	text-align:center;
+	
+}
+
+/*---------- MAIN ----------*/
+#main
+{
+	width: 700px;
+	float: left;	
+	
+	
+}
+/*---------- MENURIGHT ----------*/
+#right
+{
+	float: right;
+	width: 148px;
+	background-color: #C0C0C0;
+}
+/*---------- FOOTER ----------*/
+#footer
+{
+	height: 60px;
+	clear: both;
+	padding: 0;
+	background: #FFF url('../Images/footerbg.gif') repeat-x;
+}
+/* Configuração das informações que ficam no canto esquerdo da tela */
+#footer #footer-left 
+{
+	width: 60%;
+	float: left;
+	text-align: left;
+}
+
+/* Configurações que ficam no canto direito da tela */
+#footer #footer-right
+{
+	width: 40%;
+	float: right;
+	text-align: right;
+}
+
+
+
+
+.grid_select_item
+{
+	width: 1px;
+}
+
+
+.Apostas_Pontos_Zero
+{
+	background-color: blue;
+}
+.Apostas_Pontos_Pontos
+{
+	background-color: Gray;
+}
+.Apostas_Pontos_Cheio
+{
+	background-color: Green;
+}
+.Apostas_Pontos_VDE
+{
+	background-color:Yellow;
+}
+
+.body
+{
+	
+}
+
+.Panel
+{
+}
+
+.RowTitle
+{
+	background-color: Gray;
+}
+
+
+
+.errorList
+{
+	color: Red; 
+	list-style-type: none;
+	padding: 2px; 
+	font-weight: bold;
+	font-size: 8pt;	
+}
+
+.messagesList
+{
+	color: Green; 
+	list-style-type: none;
+	padding: 2px; 
+	font-weight: bold;
+	font-size: 8pt;	
+}
+
+.errorMessagePanel
+{
+	background-color: #ffffcc;
+	padding-top:20px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body
+{
+	width: 1000px;
+	margin: 0;
+	padding: 0;
+	border: 10;
+	text-align: center;
+	font-family: "Trebuchet MS" , "Lucida Grande" , Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	height: 100%;
+}		
+
+h1 {
+	font-size: 2.0em;
+
+	
+	font-weight: normal;
+}
+
+
+.data_section_header
+{
+    background: url(/images/sprite.png) #bfdaff repeat-x left -1300px;
+	/*color: DarkBlue;*/
+	border:  thin 1px solid #bfdaff;
+	font-size: 8pt;
+	font-weight:bold;
+	color: black;
+	padding: 5px 5px 5px 5px; 
+}
+.data_section_selected_header
+{
+	background: url(/images/sprite.png) #CCFFCC  repeat-x left  -1400px;
+	color: Aqua;
+	border: thin 1px solid #bfdaff;
+	font-size: 8pt;
+	font-weight: bold;
+	color: white;
+	padding: 5px 5px 5px 5px;
+}
+
+.data
+
+.data_section
+{
+	font-size: 8pt;
+	color: black;
+	padding: 5px -5px -5px -5px;
+	text-align: center;
+	width: 555px;
+}
+
+
+/********************** HEADER PAGES ****************************/
+.adminTable
+{
+	/*height: 100%;
+	width: 100%;*/
+	font-family: Verdana;
+	font-size: 7pt;
+	width: 100%;
+	height: 40px;
+}
+
+.welcome-message 
+{
+	color:Black;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+.adminTools
+{
+	font-size: 7pt;
+	text-align: right;
+}
+.adminHome
+{
+	font-size: 7pt;
+	text-align: right;
+	vertical-align: middle;
+	width: 20px;
+}
+
+
+.linkedimgandtext:link, .linkedImage:link, .linkedImage:active, .linkedImage:visited, .linkedImage:img
+{
+	text-decoration:none;
+	border: none;
+	font-size: 7pt;
+}
+
+.linkedimgandtext span 
+{
+	text-decoration:underline !important;
+	font-size: 7pt;
+}
+
+
+
+
+
+
+
+/****************************** JOGOS ****************************/
+.jogoInputResult
+{
+	font-family: 'Comic Sans MS';
+	font-size: medium;
+	font-weight: bold;
+	background-color: #FFFF00;
+	border-style: inset;
+	border-width: thin;
+	vertical-align: middle;
+	text-align: center;
+}
+
+
+.header_jogo_fase
+{
+}
+.header_jogo_rodada
+{
+	background: url(/images/sprite.png) #CCFFCC  repeat-x left  -1400px;
+	color: Aqua;
+	border: thin 1px solid #bfdaff;
+	font-size: 11pt;
+	font-weight: bold;
+	color: white;
+	padding: 5px 5px 5px 5px;
+}
+.header_jogo_data
+{
+	background: url(/images/sprite.png) #bfdaff repeat-x left -1300px;
+	/*color: DarkBlue;*/
+	border:  thin 1px solid #bfdaff;
+	font-size: 9pt;
+	font-weight:bold;
+	color: black;
+	padding: 5px 5px 5px 5px; 
+	
+}
+.header_jogo_grupo
+{
+}
+.jogoGrupoHora
+{
+	width: 120px;
+	font-size: "xx-small";
+}
+.jogoRodada
+{
+	text-align: center;
+}
+.jogoDia
+{
+}
+.jogoHora
+{
+	font-size: x-small;
+}
+.jogoGrupo
+{
+}
+.jogoFase
+{
+}
+.jogoTimeCasa
+{
+	text-align: right;
+	width: 100px;
+}
+.jogoTimeFora
+{
+	text-align: left;
+	width: 100px;
+}
+.jogoTimeImage
+{
+	width: 5px;
+	vertical-align: middle;
+	text-align: center;
+}
+.jogoGols
+{
+	width: 20px;
+	text-align: center;
+	font-size: small;
+	font-family: 'Comic Sans MS';
+}
+.jogoVersus
+{
+	text-align: center;
+	width: 15px;
+}
+.jogoValido
+{
+	width: 5px;
+	text-align: center;
+}
+.jogoValidadoBy
+{
+}
+.jogoEstadio
+{
+}
+.jogoResultado
+{
+	width: 5px;
+}
+.jogoValidadoData
+{
+}
+
+
+/****************************** APOSTAS ****************************/
+.jogoAposta
+{
+	width: 20px;
+	font-size: "x-small";
+	text-align: center;
+}
+
+.jogoInputAposta
+{
+	font-family: 'Comic Sans MS';
+	font-size: medium;
+	font-weight: bold;
+	background-color: #0099FF;
+	border-style: inset;
+	border-width: thin;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.jogoPontos
+{
+	width: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.jogoDataAposta
+{
+	width: 20px;
+	text-align: center;
+	font-size: "xx-small";
+}
+.jogoApostaAuto
+{
+	width: 5px;
+}
+
+
+/****************************** Classificação de Campeonato ****************************/
+.classificacaoPontos
+{
+	width: 50px;
+	text-align: center;
+}
+.classificacaoPosicao
+{
+	width: 40px;
+	text-align: center;
+}
+
+
+/****************************** Classificacao de bolão ****************************/
+.bolaoPosicao
+{
+	
+	width: 30px;
+	text-align: center;
+}
+.bolaoPontos
+{
+	width: 27px;
+	text-align: center;
+}
+
+/****************************** Ambiente ****************************/
+
+.textbox
+{
+    font-family: "Trebuchet MS", "Lucida Grande", Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+
+}
+
+.labelText
+{
+    font-family: "Trebuchet MS", "Lucida Grande", Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+
+}
+.labelValue
+{
+	font-family: "Trebuchet MS" , "Lucida Grande" , Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+.button 
+{
+    font-family: Verdana;
+    font-size: 8pt;
+}
+
+.dropdownlist
+{
+	font-family: "Trebuchet MS", "Lucida Grande", Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+}

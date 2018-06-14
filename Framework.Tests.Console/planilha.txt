@@ -1,0 +1,190 @@
+1	16/01 sáb	17:00	Palmeiras		x		Mogi Mirim
+1	16/01 sáb	19:30	Rio Claro		x		Botafogo-SP
+1	16/01 sáb	19:30	Ponte Preta		x		Santo André
+1	16/01 sáb	19:30	Bragantino		x		Oeste
+1	16/01 sáb	19:30	Ituano		x		Mirassol
+1	17/01 dom	11:00	Sertãozinho		x		Barueri
+1	17/01 dom	17:00	Monte Azul		x		Corinthians
+1	17/01 dom	17:00	São Paulo		x		Portuguesa
+1	17/01 dom	19:30	São Caetano		x		Paulista
+1	17/01 dom	19:30	Rio Branco		x		Santos
+2	19/01 ter	19:30	Botafogo-SP		x		Ituano
+2	20/01 qua	17:00	Portuguesa		x		Sertãozinho
+2	20/01 qua	19:30	Paulista		x		Rio Claro
+2	20/01 qua	19:30	Oeste		x		Monte Azul
+2	20/01 qua	19:30	Santos		x		Ponte Preta
+2	20/01 qua	21:50	Mirassol		x		São Paulo
+2	20/01 qua	21:50	Corinthians		x		Bragantino
+2	21/01 qui	19:30	Mogi Mirim		x		Rio Branco
+2	21/01 qui	21:00	Barueri		x		Palmeiras
+2	21/01 qui	21:50	Santo André		x		São Caetano
+3	23/01 sáb	17:00	Ponte Preta		x		Monte Azul
+3	23/01 sáb	19:30	Bragantino		x		Portuguesa
+3	23/01 sáb	19:30	São Paulo		x		Rio Claro
+3	24/01 dom	11:00	Santo André		x		Paulista
+3	24/01 dom	17:00	Palmeiras		x		Ituano
+3	24/01 dom	17:00	Oeste		x		Corinthians
+3	24/01 dom	17:00	São Caetano		x		Sertãozinho
+3	24/01 dom	19:30	Rio Branco		x		Botafogo-SP
+3	24/01 dom	19:30	Mirassol		x		Barueri
+3	24/01 dom	19:30	Mogi Mirim		x		Santos
+4	27/01 qua	19:30	Santos		x		Barueri
+4	27/01 qua	19:30	Santo André		x		Oeste
+4	27/01 qua	19:30	Rio Claro		x		São Caetano
+4	27/01 qua	19:30	Portuguesa		x		Mogi Mirim
+4	27/01 qua	21:50	Corinthians		x		Mirassol
+4	27/01 qua	21:50	Monte Azul		x		Palmeiras
+4	28/01 qui	17:00	São Paulo		x		Paulista
+4	28/01 qui	19:30	Sertãozinho		x		Rio Branco
+4	28/01 qui	19:30	Botafogo-SP		x		Ponte Preta
+4	28/01 qui	21:50	Bragantino		x		Ituano
+5	30/01 sáb	17:00	Barueri		x		Rio Claro
+5	30/01 sáb	19:30	São Caetano		x		Monte Azul
+5	30/01 sáb	19:30	Santos		x		Oeste
+5	31/01 dom	11:00	Mogi Mirim		x		Bragantino
+5	31/01 dom	17:00	Corinthians		x		Palmeiras
+5	31/01 dom	17:00	Portuguesa		x		Botafogo-SP
+5	31/01 dom	17:00	Rio Branco		x		Ponte Preta
+5	31/01 dom	19:30	Ituano		x		Santo André
+5	31/01 dom	19:30	Paulista		x		Mirassol
+5	31/01 dom	19:30	Sertãozinho		x		São Paulo
+6	03/02 qua	16:00	Monte Azul		x		Ituano
+6	03/02 qua	19:30	Sertãozinho		x		Rio Claro
+6	03/02 qua	19:30	Barueri		x		Botafogo-SP
+6	03/02 qua	19:30	Oeste		x		Paulista
+6	03/02 qua	21:50	Ponte Preta		x		Corinthians
+6	03/02 qua	21:50	São Paulo		x		São Caetano
+6	04/02 qui	17:00	Palmeiras		x		Portuguesa
+6	04/02 qui	19:30	Bragantino		x		Rio Branco
+6	04/02 qui	21:00	Santo André		x		Santos
+6	04/02 qui	21:50	Mirassol		x		Mogi Mirim
+7	06/02 sáb	17:00	Corinthians		x		Sertãozinho
+7	06/02 sáb	19:30	Ituano		x		Barueri
+7	06/02 sáb	19:30	Rio Claro		x		Oeste
+7	07/02 dom	11:00	Monte Azul		x		Paulista
+7	07/02 dom	17:00	Rio Branco		x		Santo André
+7	07/02 dom	17:00	São Paulo		x		Santos
+7	07/02 dom	17:00	Bragantino		x		Palmeiras
+7	07/02 dom	19:30	Botafogo-SP		x		Mogi Mirim
+7	07/02 dom	19:30	Ponte Preta		x		Portuguesa
+7	07/02 dom	19:30	Mirassol		x		São Caetano
+8	12/02 sex	19:30	Santo André		x		Mirassol
+8	12/02 sex	19:30	Barueri		x		Monte Azul
+8	12/02 sex	19:30	São Caetano		x		Rio Branco
+8	13/02 sáb	17:00	Santos		x		Rio Claro
+8	13/02 sáb	17:00	Ituano		x		São Paulo
+8	13/02 sáb	17:00	Portuguesa		x		Corinthians
+8	13/02 sáb	19:30	Paulista		x		Bragantino
+8	13/02 sáb	19:30	Ponte Preta		x		Sertãozinho
+8	13/02 sáb	19:30	Botafogo-SP		x		Palmeiras
+8	13/02 sáb	19:30	Mogi Mirim		x		Oeste
+9	17/02 qua	19:30	Oeste		x		Portuguesa
+9	17/02 qua	19:30	Rio Claro		x		Ituano
+9	17/02 qua	19:30	Sertãozinho		x		Santo André
+9	17/02 qua	19:30	Paulista		x		Ponte Preta
+9	17/02 qua	19:30	Rio Branco		x		Monte Azul
+9	17/02 qua	21:50	Mogi Mirim		x		Corinthians
+9	17/02 qua	21:50	Palmeiras		x		São Caetano
+9	18/02 qui	19:30	Mirassol		x		Botafogo-SP
+9	18/02 qui	21:00	Santos		x		Bragantino
+9	19/02 sex	21:50	São Paulo		x		Barueri
+10	20/02 sáb	17:00	Ituano		x		Sertãozinho
+10	20/02 sáb	17:00	Portuguesa		x		Paulista
+10	20/02 sáb	19:30	Corinthians		x		Rio Branco
+10	20/02 sáb	19:30	Ponte Preta		x		Oeste
+10	21/02 dom	11:00	Monte Azul		x		Rio Claro
+10	21/02 dom	16:00	Palmeiras		x		São Paulo
+10	21/02 dom	16:00	Barueri		x		Santo André
+10	21/02 dom	18:30	Mirassol		x		Santos
+10	21/02 dom	18:30	São Caetano		x		Mogi Mirim
+10	21/02 dom	18:30	Bragantino		x		Botafogo-SP
+11	27/02 sáb	16:00	Botafogo-SP		x		São Caetano
+11	27/02 sáb	16:00	Rio Branco		x		Ituano
+11	27/02 sáb	18:30	Santo André		x		Portuguesa
+11	27/02 sáb	18:30	Sertãozinho		x		Bragantino
+11	27/02 sáb	20:30	Mirassol		x		Oeste
+11	28/02 dom	16:00	São Paulo		x		Monte Azul
+11	28/02 dom	16:00	Santos		x		Corinthians
+11	28/02 dom	18:30	Rio Claro		x		Palmeiras
+11	28/02 dom	18:30	Mogi Mirim		x		Paulista
+11	28/02 dom	18:30	Barueri		x		Ponte Preta
+12	03/03 qua	15:00	Monte Azul		x		Mirassol
+12	03/03 qua	16:00	Corinthians		x		Botafogo-SP
+12	03/03 qua	19:30	Portuguesa		x		Rio Claro
+12	03/03 qua	19:30	Bragantino		x		São Caetano
+12	03/03 qua	19:30	Barueri		x		Rio Branco
+12	03/03 qua	21:50	Oeste		x		São Paulo
+12	03/03 qua	21:50	Palmeiras		x		Santo André
+12	04/03 qui	0:00	Sertãozinho		x		Mogi Mirim
+12	04/03 qui	0:00	Paulista		x		Santos
+12	04/03 qui	19:30	Ituano		x		Ponte Preta
+13	06/03 sáb	16:00	Santo André		x		Botafogo-SP
+13	06/03 sáb	18:30	Bragantino		x		Monte Azul
+13	06/03 sáb	18:30	Oeste		x		Barueri
+13	07/03 dom	11:00	Rio Branco		x		Mirassol
+13	07/03 dom	16:00	Portuguesa		x		Santos
+13	07/03 dom	16:00	São Caetano		x		Corinthians
+13	07/03 dom	18:30	Ituano		x		Paulista
+13	07/03 dom	18:30	Rio Claro		x		Mogi Mirim
+13	07/03 dom	18:30	Ponte Preta		x		São Paulo
+13	07/03 dom	18:30	Palmeiras		x		Sertãozinho
+14	13/03 sáb	16:00	Corinthians		x		Santo André
+14	13/03 sáb	16:00	Botafogo-SP		x		Oeste
+14	13/03 sáb	18:30	Paulista		x		Barueri
+14	13/03 sáb	18:30	Mogi Mirim		x		Ituano
+14	13/03 sáb	18:30	Portuguesa		x		São Caetano
+14	14/03 dom	11:00	Monte Azul		x		Sertãozinho
+14	14/03 dom	16:00	Santos		x		Palmeiras
+14	14/03 dom	16:00	São Paulo		x		Rio Branco
+14	14/03 dom	18:30	Ponte Preta		x		Bragantino
+14	14/03 dom	18:30	Mirassol		x		Rio Claro
+15	20/03 sáb	15:00	Monte Azul		x		Portuguesa
+15	20/03 sáb	16:00	Palmeiras		x		Ponte Preta
+15	20/03 sáb	16:00	Sertãozinho		x		Mirassol
+15	20/03 sáb	18:30	Santo André		x		Bragantino
+15	20/03 sáb	18:30	Rio Claro		x		Rio Branco
+15	21/03 dom	11:00	São Caetano		x		Oeste
+15	21/03 dom	16:00	Barueri		x		Corinthians
+15	21/03 dom	18:30	Santos		x		Ituano
+15	21/03 dom	18:30	São Paulo		x		Mogi Mirim
+15	21/03 dom	18:30	Paulista		x		Botafogo-SP
+16	24/03 qua	0:00	Oeste		x		Sertãozinho
+16	24/03 qua	0:00	Ponte Preta		x		Rio Claro
+16	24/03 qua	0:00	Bragantino		x		São Paulo
+16	24/03 qua	0:00	Santo André		x		Monte Azul
+16	24/03 qua	0:00	Mirassol		x		Portuguesa
+16	24/03 qua	0:00	Barueri		x		Mogi Mirim
+16	24/03 qua	0:00	Ituano		x		São Caetano
+16	24/03 qua	0:00	Rio Branco		x		Palmeiras
+16	24/03 qua	0:00	Botafogo-SP		x		Santos
+16	24/03 qua	0:00	Corinthians		x		Paulista
+17	28/03 dom	0:00	Corinthians		x		São Paulo
+17	28/03 dom	0:00	Santos		x		Monte Azul
+17	28/03 dom	0:00	Portuguesa		x		Barueri
+17	28/03 dom	0:00	Botafogo-SP		x		Sertãozinho
+17	28/03 dom	0:00	São Caetano		x		Ponte Preta
+17	28/03 dom	0:00	Rio Claro		x		Bragantino
+17	28/03 dom	0:00	Mogi Mirim		x		Santo André
+17	28/03 dom	0:00	Paulista		x		Rio Branco
+17	28/03 dom	0:00	Oeste		x		Ituano
+17	28/03 dom	0:00	Palmeiras		x		Mirassol
+18	04/04 dom	0:00	Ituano		x		Corinthians
+18	04/04 dom	0:00	São Caetano		x		Santos
+18	04/04 dom	0:00	Palmeiras		x		Oeste
+18	04/04 dom	0:00	Bragantino		x		Barueri
+18	04/04 dom	0:00	São Paulo		x		Botafogo-SP
+18	04/04 dom	0:00	Ponte Preta		x		Mirassol
+18	04/04 dom	0:00	Rio Claro		x		Santo André
+18	04/04 dom	0:00	Sertãozinho		x		Paulista
+18	04/04 dom	0:00	Monte Azul		x		Mogi Mirim
+18	04/04 dom	0:00	Rio Branco		x		Portuguesa
+19	07/04 qua	0:00	Paulista		x		Palmeiras
+19	07/04 qua	0:00	Santo André		x		São Paulo
+19	07/04 qua	0:00	Santos		x		Sertãozinho
+19	07/04 qua	0:00	Botafogo-SP		x		Monte Azul
+19	07/04 qua	0:00	Mogi Mirim		x		Ponte Preta
+19	07/04 qua	0:00	Corinthians		x		Rio Claro
+19	07/04 qua	0:00	Mirassol		x		Bragantino
+19	07/04 qua	0:00	Barueri		x		São Caetano
+19	07/04 qua	0:00	Portuguesa		x		Ituano
+19	07/04 qua	0:00	Oeste		x		Rio Branco

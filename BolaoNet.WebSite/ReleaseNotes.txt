@@ -1,0 +1,200 @@
+﻿[1.20.2.0] - 28/06/2014
+* Corrigindo a amostragem dos times da tela principal.
+* Corrigindo a geração de PDF no término do campeonato.
+
+[1.20.1.0] - 24/06/2014
+* Aplicando a últimas posições da classificação quando é encontrado o registro "Lanterna".
+
+[1.20.0.0] - 23/06/2014
+* Apresentando os pontos obtidos na tela principal.
+
+[1.19.0.0] - 21/06/2014
+* Apresentando as próximas apostas dos usuários na tela principal.
+
+[1.18.0.0] - 19/06/2014
+* Adicionando o menu de jogos sem acertos.
+
+[1.17.0.0] - 17/06/2014
+* Adicionando a publicação no mural dos usuários no facebook.
+* Correção do grid de classificação na amostragem dos itens pontuados.
+
+[1.16.2.0] - 11/06/2014
+* Adicionando algumas porcentagens de apostas.
+
+[1.16.1.0] - 29/05/2014
+* Adicionando o nome completo dos usuários na tela de classificação.
+
+[1.16.0.0] - 28/05/2014
+* Mudando o menu para incluir as regras nas apostas.
+* Alterando o arquivo pdf gerado para imprimir apenas os resultados dos jogos que aconteceram, ignorando os jogos que ainda não ocorreram.
+* Adicionando um link para permitir download das apostas dos usuários.
+* Adicionando um procedimento para corrigir trocas de posicionamento dos times nas eliminatórias.
+
+[1.15.0.2] - 18/05/2014
+* Corrigindo o problema de posição na classificação dos usuários.
+
+[1.15.0.1] - 17/05/2014
+* Corrigindo o problema do innerText para Firefox.
+
+[1.15.0.0] - 05/05/2014
+* Permitindo selecionar o time que passa para a próxima fase.
+
+[1.14.0.2] - 21/03/2014
+* Atribuindo o filtro de rodadas ao iniciar as apostas.
+
+[1.14.0.1] - 21/03/2014
+* Criando os testes de validação de dados.
+* Atribuindo o pdf final para compilar os resultados dos jogos.
+* Ao inserir os resultados dos jogos dos usuários, o cálculo do time campeão será calculado.
+
+
+[0.14.0.1] - 06/03/2014
+* Atribuindo a quantidade de dias para iniciar a copa.
+
+
+[0.14.0.0] - 03/12/2013
+* Criando o CSS responsivo
+* Melhorando a integração contínua.
+* Corrigido o problema de pagamentos dos bolões da tela principal.
+* Corrigido o problema de armazenamento das apostas manuais.
+* Corrigido o problema de escolha de dependência ao definir apostas automáticas.
+* Ao selecionar itens restantes de um bolão, o mesmo é selecionado.
+* Corrigido o bug de armazenar o bolão na edição.
+* Corrigido o problema de duplicação da combo de apostas extras.
+* Restringindo apenas números nas apostas manuais.
+* Corrigido o reposicionamento dos botões do menu principal.
+* Corrigido o problema de contagem das apostas automáticas.
+* Corrigido a duplicação dos resultados das apostas extras.
+* Atribuindo a exclusão no banco de dados ao remover o usuário do bolão no módulo de iniciar e parar.
+* Corrigido o problema de classificação dos usuários dos bolões ao inserir um jogo.
+* Criado o módulo de acertos mais difíceis.
+
+
+[0.13.1.0] - 03/12/2012
+* Convertido para Framework 4.0.
+* Corrigido o problema de concorrência na abertura do banco de dados.
+* Aplicado a configuração do campeonato da Copa das Confederações 2013.
+* Corrigido problemas de envio de emails.
+
+
+[0.13.0.0] - 1/7/2010
+* Adicionando a simulação de apostas extras.
+
+[0.12.0.0] - 29/6/2010
+* Corrigida a simulação para que considere os times verdadeiros e não os da aposta do usuário.
+* Corrigido o problema de dependência de jogos que ao ocorrer empate apenas o time que joga fora de casa que passa.
+* Modificando a página de apostas dos usuários para mostrar qual o time que seria da aposta do usuário.
+* Adicionando o módulo de posição de pontos por rodada dos usuários.
+
+
+[0.11.0.0] - 26/6/2010
+* Corrigindo o problema de login no qual aparecia dados de outro usuário no profile de outro.
+* Adicionando as verificações de oninit de cada página para que possa fazer as requisições corretas ao abrir a página.
+* Corrigindo algumas apostas extras faltantes.
+* Adicionando o módulo de inserção de times para apostas extras.
+* Adicionando na tela de classificação do bolão, os pontos de apostas extras. (Acrescentado o campo TotalApostaExtra na tabela BoloesMembrosClassificacao).
+
+
+[0.10.0.0] - 24/6/2010
+* Corrigido as pontuações de classificação dos usuários no banco de dados.
+* Corrigida a seleção das apostas do usuário, pois ao selecionar estava escondendo os jogos.
+* Corrigida a tela inicial dos jogos, carregando diretamente na opção: "Ontem, hoje, e amanhã".
+* Corrigido o erro de collation no banco ao entrar com os resultados.
+* Retirado os títulos sem nome das páginas.
+* Adicionando o módulo de simulação de jogos que ainda não ocorreram.
+
+
+[0.9.0.0] - 6/6/2010
+* Atribuindo as posições das seleções ao carregar um arquivo excel.
+
+
+[0.8.0.0] - 5/6/2010
+* Adicionando uma pergunta ao remover o usuário do bolão.
+* Removendo o link de records de gols.
+* Adicionando um módulo para ler arquivos excel e armazenar as apostas do usuário no banco.
+* Atualizando a lista de membros ao remover algum usuário.
+* Corrigido o time que passa para a próxima fase em função da quantidade de pontos do grupo.
+* Ao iniciar o bolão, foi criada a funcionalidade para preencher 0 x 0 para as apostas não realizadas
+
+
+
+[0.7.0.0] - 31/5/2010
+* Corrigido o problema de dependência ao colocar as apostas dos usuários.
+* Corrigida a classificação dos usuários.
+* Corrigido a classificação dos times.
+* Desabilitado a validação do código ao criar o usuário.
+* Adicionando cores para os pontos das apostas.
+* Formatando o valor de devedor da tela principal.
+
+
+[0.6.0.0] - 24/05/2010
+* Criada as linhas do arquivo pdf indicando o caminho da seleção à final do campeonato.
+* Criado o módulo de pesquisa de apostas extras por posição.
+* Arrumado o módulo de estatísticas limitando a quantidade de resultados para o gráfico.
+* Corrigido o problema de envio de emails ao criar o usuário.
+
+
+
+[0.5.0.0] - 02/05/2010
+* Adicionado download em pdf das apostas do usuário.
+* Adicionado o campo IsLoaded indicando se o objeto foi carregado pelo banco.
+* Restringindo as páginas dos bolões se caso o bolão não foi iniciado e só pode ser feita as apostas antes de iniciar o campeonato.
+* Ao executar log off, é zerada as variáveis de inicialização.
+* Restringida as apostas depois de iniciado o bolão.
+* Criada a página de iniciar e parar o bolão e enviar emails identificando se foi pago e se tem alguma aposta faltante.
+* No módulo de iniciar bolão, criado o módulo para enviar as apostas de todos os usuários para todos os participantes.
+* Corrigido os modulos de participação do bolão e pagamentos ao se confirmar se deseja continuar com a operação
+* Corrigida a tela de esqueci a senha.
+* Criado o módulo de histórico de campeões do campeonato.
+* Corrigida as apostas extras por usuário.
+
+
+[0.4.0.0] - 16/04/2010
+* Quando fizer uma aposta, é calculado para qual jogo com pendência é atribuído.
+* Retirado o filtro por fase ao realizar a aposta
+* Atribuído CSS para o módulo apostas dos jogos nos campos de data de aposta e pontuação
+* Atribuída a funcionalidade de selecionar automaticamente o time que será classificado para a próxima fase (deve-se atribuir um grupo default ' ' e para todos os jogos atribuir este grupo.)
+* Corrigido o problema de classificação dos times
+* Arrumado o problema de sessão ao selecionar grupo ou times nas apostas ou em seleção de jogos
+* Corrigido o problema de não poder entrar com o valor dos penaltis.
+* Atribuindo pendências para os times que perderem
+* Corrigido o problema de tempo expirado na criação de um login.
+* Criado a página de pesquisa de apostas extras por usuário.
+
+
+[0.3.0.0] - 14/04/2010
+* Atribuído uma descrição para a página de apostas automáticas.
+* Atribuído uma descrição para a página de apostas extras.
+* Permitindo a visualização da bandeira do time ao selecionar as apostas extras.
+* Reduzido o tamanho do campo aposta em apostas extras e adicionando o padrão ao Pontos.
+* Atribuído CSS nos dados dos pontos dos critérios.
+* Dado permissão à pasta de charts para mostrar os gráficos de estatísticas e histórico de rodadas.
+* Ao retirar a seleção do bolão ou campeonato, voltar para a página principal.
+* Emitindo uma mensagem caso não exista mensagem para ser lida.
+* Atribuindo o email para que se possa enviar uma mensagem se caso ocorra um erro na aplicação.
+* Atribuido mensagem de processamento quando estiver realizando uma requisição com um tempo grande.
+* Quando clicar no link de login, ir diretamente para o menu principal.
+* Grava-se um log quando um usuário for aprovado.
+* Arrumado a apostas automáticas para gravar apostas para todos os jogos, inclusive final e semifinais.
+* Arrumado o problema de armazenamento de apostas.
+* Adicionado o release notes demonstrando as atualizações realizadas.
+
+
+[0.2.0.0] - 12/04/2010
+* Retirado o campo CPF na requisição de criação de login.
+* Atribuindo non-case-sensitive para o código na criação do login.
+* Atribuindo apenas letras maiúsculas no código de confirmação da criação do login.
+* Exclui-se o usuário que foi criado porém não foi possível enviar um email de ativação.
+* Atribuindo o link classificação do bolão na tela principal que é apresentado a quantidade de membros.
+* Mostrando a quantidade de apostas restantes do bolão na tela principal.
+* No módulo de usuários por roles, adicionado a funcionalidade de lock/unlock e aprovado/desaprovado.
+* Arrumando a mensagem emitida de quando não existir goleadas
+* Adicionado o filtro por times/grupos e fases ao selecionar uma aposta ou jogo.
+* Adicionando email externo para enviar notificações de usuários criados.
+* Arrumado o problema de enviar mais de um email de credenciais quando finalizar o processo de cadastro.
+* Atribuindo permissão necessária para mudar a imagem do usuário.
+* Quando selecionado as apostas no menu principal, é automaticamente selecionado o bolão e campeonato.
+
+
+[0.1.0.0] - 11/01/2010
+* Versão Inicial

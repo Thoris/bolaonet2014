@@ -1,0 +1,110 @@
+﻿/*---------- WRAP ----------*/
+#wrap
+{  
+}
+
+/*---------- HEADER ----------*/
+#header
+{
+    display: none;
+}
+#headerTitle
+{
+    
+}
+#headerEnvironment
+{
+    
+}
+
+/*---------- MENU ----------*/
+#menu
+{
+    background-color: #E3EAEB;
+    height: 25px;
+    width:100%;
+}
+/*---------- SUBHEADER ----------*/
+#subheader
+{
+    
+}
+/*---------- PROGRESS DIV ----------*/
+#pathdescription
+{
+	display: none;
+	
+}
+
+#progress
+{
+	text-align: right;
+	vertical-align: middle;
+	background-color: #FFFF00;
+	color: #FF0000;
+	text-decoration: blink;
+	font-weight: bold;
+	font-size:10px;
+}
+
+
+/*---------- MENULEFT ----------*/
+#left
+{
+
+}
+/*---------- BUTTONS ----------*/
+#buttons
+{
+}
+
+/*---------- ALARMS ----------*/
+#alarms
+{
+
+}
+/*---------- BODY ----------*/
+#body
+{
+	
+}
+
+/*---------- MAIN ----------*/
+#main
+{
+    
+}
+
+/*---------- MENURIGHT ----------*/
+#right
+{
+    display: none;
+}
+
+/*---------- FOOTER ----------*/
+#footer
+{
+	display: none;
+}
+
+/* Configuração das imagens no canto esquerdo */
+.imageLeft
+{
+	display: none;
+}
+
+/* Menu principal */
+.MainMenu
+{
+    position: relative;
+    margin-left: 12px;
+    text-align: center;
+}
+
+.MainMenu ul
+{
+}
+.MainMenu li
+{
+    width:310px;
+}
